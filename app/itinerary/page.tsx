@@ -151,7 +151,7 @@ const days = [
 ];
 
 const locationColors: Record<string, string> = {
-  "Cefalù": "bg-[#1c2b4b] text-[#ede5d5]",
+  "Cefalù": "bg-[#000000] text-[#ede5d5]",
   "Taormina": "bg-[#4a6b3a] text-[#ede5d5]",
   "Cefalù → PMO": "bg-[#7a8090] text-[#ede5d5]",
 };
@@ -162,7 +162,7 @@ export default function ItineraryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1c2b4b] py-20 px-6 text-center">
+      <section className="bg-[#000000] py-20 px-6 text-center">
         <h1 className="sr-only">Itinerary — Chef Rocco Garibaldi Sicily Tour</h1>
         <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Day by Day</p>
         <p className="text-[#ede5d5]/80 text-lg max-w-xl mx-auto">
@@ -200,7 +200,7 @@ export default function ItineraryPage() {
                     </span>
                     <span className="text-[#7a8090] text-xs">{d.date}</span>
                   </div>
-                  <h3 className="font-serif text-lg text-[#1c2b4b] leading-snug">{d.title}</h3>
+                  <h3 className="font-serif text-lg text-[#000000] leading-snug">{d.title}</h3>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {d.highlights.map((h) => (
                       <span key={h} className="text-xs text-[#7a8090] border border-[#ede5d5] px-2 py-0.5">
@@ -241,13 +241,13 @@ export default function ItineraryPage() {
 
       {/* CTA */}
       <section className="bg-[#b8924a] py-16 px-6 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl text-[#1c2b4b] mb-4">Secure Your Spot</h2>
-        <p className="text-[#1c2b4b]/70 mb-8">Early bird $5,600 pp · Book by March 9th, 2026</p>
+        <h2 className="font-serif text-3xl md:text-4xl text-[#000000] mb-4">Secure Your Spot</h2>
+        <p className="text-[#000000]/70 mb-8">Early bird $5,600 pp · Book by March 9th, 2026</p>
         <a
           href="https://form.jotform.com/242294677009059"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#1c2b4b] text-[#fdfaf4] px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"
+          className="inline-block bg-[#000000] text-[#fdfaf4] px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"
         >
           Book Italy
         </a>

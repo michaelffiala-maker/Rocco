@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1c2b4b] py-20 px-6 text-center">
+      <section className="bg-[#000000] py-20 px-6 text-center">
         <p className="text-[#ede5d5] text-base md:text-lg mb-3 tracking-wide italic font-light">
           Travel and experience the culinary traditions and beauty of the Old Country
         </p>
@@ -39,7 +39,7 @@ export default function Home() {
       </section>
 
       {/* Dates banner */}
-      <section className="bg-[#1c2b4b] border-y border-[#b8924a]/30 text-[#ede5d5] py-4 text-center">
+      <section className="bg-[#000000] border-y border-[#b8924a]/30 text-[#ede5d5] py-4 text-center">
         <p className="text-xs tracking-[0.3em] uppercase">
           September 1–10, 2026 &nbsp;·&nbsp; Cefalù & Taormina, Sicily &nbsp;·&nbsp;{" "}
           <span className="text-[#b8924a]">Early bird from $5,600 pp</span>
@@ -50,14 +50,14 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
           <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-4">What Awaits You</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#1c2b4b]">Ten Days of Pure Italy</h2>
+          <h2 className="font-serif text-4xl md:text-5xl text-[#000000]">Ten Days of Pure Italy</h2>
           <div className="w-16 h-px bg-[#b8924a] mx-auto mt-5" />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {highlights.map((h) => (
             <div key={h.title} className="bg-white border border-[#ede5d5] p-8 hover:shadow-lg hover:border-[#b8924a]/30 transition-all">
               <div className="w-8 h-px bg-[#b8924a] mb-5" />
-              <h3 className="font-serif text-xl text-[#1c2b4b] mb-2">{h.title}</h3>
+              <h3 className="font-serif text-xl text-[#000000] mb-2">{h.title}</h3>
               <p className="text-[#7a8090] text-sm leading-relaxed">{h.desc}</p>
             </div>
           ))}
@@ -65,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* Story section */}
-      <section className="bg-[#1c2b4b] text-[#ede5d5] py-24 px-6">
+      <section className="bg-[#000000] text-[#ede5d5] py-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-4">45 Years of Italian Tradition</p>
           <h2 className="font-serif text-4xl md:text-5xl mb-3 leading-tight">It&apos;s a Family Thing</h2>
@@ -92,8 +92,8 @@ export default function Home() {
 
       {/* CTA banner */}
       <section className="bg-[#b8924a] py-16 px-6 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl text-[#1c2b4b] mb-4">Spots Are Limited</h2>
-        <p className="text-[#1c2b4b]/70 mb-8 text-lg">
+        <h2 className="font-serif text-3xl md:text-4xl text-[#000000] mb-4">Spots Are Limited</h2>
+        <p className="text-[#000000]/70 mb-8 text-lg">
           Early bird pricing available through March 9th, 2026.
           <br />
           Groups of 5+ can request custom itineraries and dates.
@@ -102,7 +102,7 @@ export default function Home() {
           href="https://form.jotform.com/242294677009059"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-[#1c2b4b] text-[#fdfaf4] px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"
+          className="inline-block bg-[#000000] text-[#fdfaf4] px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"
         >
           Book Italy Now
         </a>

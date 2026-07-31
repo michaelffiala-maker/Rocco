@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`h-full ${cormorant.variable}`}>
-      <body className="min-h-full flex flex-col bg-[#fdfaf4] text-[#1c2b4b]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
+      <body className="min-h-full flex flex-col bg-[#fdfaf4] text-[#000000]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
         <Nav />
         {/* Global white logo banner — top of every page */}
         <div className="pt-16 bg-white border-b border-[#ede5d5] flex justify-center py-10 px-6">

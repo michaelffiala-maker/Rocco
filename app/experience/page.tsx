@@ -58,7 +58,7 @@ export default function ExperiencePage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1c2b4b] py-20 px-6 text-center">
+      <section className="bg-[#000000] py-20 px-6 text-center">
         <h1 className="sr-only">The Experience — Chef Rocco Garibaldi Sicily</h1>
         <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">What&apos;s Included</p>
         <p className="text-[#ede5d5]/80 text-lg max-w-xl mx-auto italic font-light">
@@ -70,14 +70,14 @@ export default function ExperiencePage() {
       <section className="max-w-5xl mx-auto px-6 py-24">
         <div className="text-center mb-14">
           <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Everything Covered</p>
-          <h2 className="font-serif text-4xl text-[#1c2b4b]">All-Inclusive Tour Highlights</h2>
+          <h2 className="font-serif text-4xl text-[#000000]">All-Inclusive Tour Highlights</h2>
           <div className="w-12 h-px bg-[#b8924a] mx-auto mt-5" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {included.map((item) => (
             <div key={item} className="flex items-start gap-3 bg-white border border-[#ede5d5] px-6 py-4 hover:border-[#b8924a]/40 transition-colors">
               <span className="text-[#b8924a] mt-0.5 flex-shrink-0">✓</span>
-              <span className="text-[#1c2b4b] text-sm leading-relaxed">{item}</span>
+              <span className="text-[#000000] text-sm leading-relaxed">{item}</span>
             </div>
           ))}
         </div>
@@ -88,14 +88,14 @@ export default function ExperiencePage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Your Culinary Team</p>
-            <h2 className="font-serif text-4xl text-[#1c2b4b]">Meet the Chefs</h2>
+            <h2 className="font-serif text-4xl text-[#000000]">Meet the Chefs</h2>
             <div className="w-12 h-px bg-[#b8924a] mx-auto mt-5" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {chefs.map((chef) => (
               <div key={chef.name} className="bg-[#fdfaf4] border border-[#ddd0bc] p-8">
                 <div className="w-8 h-px bg-[#b8924a] mb-5" />
-                <h3 className="font-serif text-xl text-[#1c2b4b] mb-1">{chef.name}</h3>
+                <h3 className="font-serif text-xl text-[#000000] mb-1">{chef.name}</h3>
                 <p className="text-[#b8924a] text-xs tracking-[0.2em] uppercase mb-3">{chef.role}</p>
                 <p className="text-[#7a8090] text-sm leading-relaxed">{chef.bio}</p>
               </div>
@@ -109,7 +109,7 @@ export default function ExperiencePage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Your Home in Sicily</p>
-            <h2 className="font-serif text-4xl text-[#1c2b4b]">The Villas</h2>
+            <h2 className="font-serif text-4xl text-[#000000]">The Villas</h2>
             <div className="w-12 h-px bg-[#b8924a] mx-auto mt-5" />
           </div>
 
@@ -121,7 +121,7 @@ export default function ExperiencePage() {
             />
             <div>
               <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Sleeps up to 8 Guests</p>
-              <h3 className="font-serif text-3xl text-[#1c2b4b] mb-5">The Main Villa</h3>
+              <h3 className="font-serif text-3xl text-[#000000] mb-5">The Main Villa</h3>
               <div className="w-8 h-px bg-[#b8924a] mb-6" />
               <p className="text-[#7a8090] text-lg leading-relaxed mb-5">
                 Your home base for the journey — a spacious, beautifully appointed Sicilian villa
@@ -134,7 +134,7 @@ export default function ExperiencePage() {
                 home, the Main Villa is where friendships deepen and memories are made. Every meal, every
                 cooking lesson, every shared moment happens here.
               </p>
-              <ul className="space-y-2 text-sm text-[#1c2b4b]">
+              <ul className="space-y-2 text-sm text-[#000000]">
                 {["Private saltwater pool", "Full chef kitchen", "Open-air dining terrace", "Up to 8 guests", "Daily housekeeping"].map(f => (
                   <li key={f} className="flex items-center gap-3">
                     <span className="text-[#b8924a]">✓</span> {f}
@@ -156,7 +156,7 @@ export default function ExperiencePage() {
             </div>
             <div className="lg:order-1">
               <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Exclusively for Two</p>
-              <h3 className="font-serif text-3xl text-[#1c2b4b] mb-5">The Couples Villa</h3>
+              <h3 className="font-serif text-3xl text-[#000000] mb-5">The Couples Villa</h3>
               <div className="w-8 h-px bg-[#b8924a] mb-6" />
               <p className="text-[#7a8090] text-lg leading-relaxed mb-5">
                 Perched in the mountains above Cefalù, this intimate villa is a world unto itself.
@@ -169,7 +169,7 @@ export default function ExperiencePage() {
                 seeking an extraordinary escape for two — this villa was made for you. Intimate,
                 elevated, and completely unforgettable.
               </p>
-              <ul className="space-y-2 text-sm text-[#1c2b4b]">
+              <ul className="space-y-2 text-sm text-[#000000]">
                 {["Mountain views over Cefalù", "Private terrace & pool", "Ideal for honeymoons & weddings", "Vow renewal packages available", "Exclusive access for two"].map(f => (
                   <li key={f} className="flex items-center gap-3">
                     <span className="text-[#b8924a]">✓</span> {f}
@@ -183,20 +183,20 @@ export default function ExperiencePage() {
 
       {/* CTA */}
       <section className="bg-[#b8924a] py-16 px-6 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl text-[#1c2b4b] mb-4">Ready to Join Us?</h2>
-        <p className="text-[#1c2b4b]/70 mb-8">September 1–10, 2026 · Limited spots available</p>
+        <h2 className="font-serif text-3xl md:text-4xl text-[#000000] mb-4">Ready to Join Us?</h2>
+        <p className="text-[#000000]/70 mb-8">September 1–10, 2026 · Limited spots available</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="https://form.jotform.com/242294677009059"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#1c2b4b] text-[#fdfaf4] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"
+            className="bg-[#000000] text-[#fdfaf4] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"
           >
             Book Italy
           </a>
           <Link
             href="/itinerary"
-            className="border border-[#1c2b4b] text-[#1c2b4b] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#1c2b4b]/10 transition-colors"
+            className="border border-[#000000] text-[#000000] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#000000]/10 transition-colors"
           >
             View Itinerary
           </Link>

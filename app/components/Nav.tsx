@@ -16,7 +16,7 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#1c2b4b]/95 backdrop-blur-sm border-b border-[#b8924a]/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#000000]/95 backdrop-blur-sm border-b border-[#b8924a]/20">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
 
         {/* Wordmark */}
@@ -68,7 +68,7 @@ export default function Nav() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-[#1c2b4b] border-t border-[#b8924a]/20">
+        <div className="md:hidden bg-[#000000] border-t border-[#b8924a]/20">
           <ul className="flex flex-col px-6 py-4 gap-4">
             {links.map((l) => (
               <li key={l.href}>

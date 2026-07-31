@@ -32,7 +32,7 @@ export default function PricingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1c2b4b] py-20 px-6 text-center">
+      <section className="bg-[#000000] py-20 px-6 text-center">
         <h1 className="sr-only">Pricing & Book — Chef Rocco Garibaldi Sicily Tour</h1>
         <p className="text-[#c9a45a] text-xs tracking-[0.3em] uppercase mb-3">Invest in the Experience</p>
         <p className="text-[#b0a090] text-lg max-w-xl mx-auto">
@@ -49,9 +49,9 @@ export default function PricingPage() {
               Best Value
             </div>
             <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Early Bird</p>
-            <p className="font-serif text-5xl text-[#1c2b4b] mb-1">$5,600</p>
+            <p className="font-serif text-5xl text-[#000000] mb-1">$5,600</p>
             <p className="text-[#7a8090] text-sm mb-6">per person · double occupancy</p>
-            <p className="text-[#1c2b4b] text-sm mb-8 leading-relaxed">
+            <p className="text-[#000000] text-sm mb-8 leading-relaxed">
               Book on or before <strong>March 9th, 2026</strong> to lock in this rate.
               Payment secures your reservation based on availability.
             </p>
@@ -68,7 +68,7 @@ export default function PricingPage() {
           {/* Standard */}
           <div className="border border-[#ede5d5] bg-white p-10">
             <p className="text-[#7a8090] text-xs tracking-[0.3em] uppercase mb-3">Standard Rate</p>
-            <p className="font-serif text-5xl text-[#1c2b4b] mb-1">$6,500</p>
+            <p className="font-serif text-5xl text-[#000000] mb-1">$6,500</p>
             <p className="text-[#7a8090] text-sm mb-6">per person · double occupancy</p>
             <p className="text-[#7a8090] text-sm mb-8 leading-relaxed">
               Available after March 9th, 2026. Payment secures your reservation
@@ -78,7 +78,7 @@ export default function PricingPage() {
               href="https://form.jotform.com/242294677009059"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center border border-[#1c2b4b] text-[#1c2b4b] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#1c2b4b] hover:text-[#fdfaf4] transition-colors"
+              className="block text-center border border-[#000000] text-[#000000] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#000000] hover:text-[#fdfaf4] transition-colors"
             >
               Book Now
             </a>
@@ -88,7 +88,7 @@ export default function PricingPage() {
         {/* Single supplement */}
         <div className="bg-[#ede5d5] border border-[#e8c8a0] px-8 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <p className="font-serif text-lg text-[#1c2b4b]">Single Room Supplement</p>
+            <p className="font-serif text-lg text-[#000000]">Single Room Supplement</p>
             <p className="text-[#7a8090] text-sm">Traveling solo? Add a private room.</p>
           </div>
           <p className="font-serif text-3xl text-[#b8924a]">+$490</p>
@@ -100,13 +100,13 @@ export default function PricingPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14">
             <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">No Surprises</p>
-            <h2 className="font-serif text-4xl text-[#1c2b4b]">Everything That&apos;s Included</h2>
+            <h2 className="font-serif text-4xl text-[#000000]">Everything That&apos;s Included</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {included.map((item) => (
               <div key={item} className="flex items-start gap-3 bg-white px-5 py-3 border border-[#ede5d5]">
                 <span className="text-[#b8924a] flex-shrink-0 mt-0.5">✓</span>
-                <span className="text-[#1c2b4b] text-sm">{item}</span>
+                <span className="text-[#000000] text-sm">{item}</span>
               </div>
             ))}
           </div>
@@ -117,12 +117,12 @@ export default function PricingPage() {
       <section className="max-w-3xl mx-auto px-6 py-24">
         <div className="text-center mb-12">
           <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Policies</p>
-          <h2 className="font-serif text-4xl text-[#1c2b4b]">Payment & Cancellation</h2>
+          <h2 className="font-serif text-4xl text-[#000000]">Payment & Cancellation</h2>
         </div>
 
         <div className="space-y-6">
           <div className="bg-white border border-[#ede5d5] p-6">
-            <h3 className="font-serif text-lg text-[#1c2b4b] mb-2">Payment</h3>
+            <h3 className="font-serif text-lg text-[#000000] mb-2">Payment</h3>
             <p className="text-[#7a8090] text-sm leading-relaxed">
               Payments are secured via US Bank Transfer to Bank of America in USD funds.
               Payment secures your reservation based on availability.
@@ -130,24 +130,24 @@ export default function PricingPage() {
           </div>
 
           <div className="bg-white border border-[#ede5d5] p-6">
-            <h3 className="font-serif text-lg text-[#1c2b4b] mb-2">Cancellation Policy</h3>
+            <h3 className="font-serif text-lg text-[#000000] mb-2">Cancellation Policy</h3>
             <p className="text-[#7a8090] text-sm leading-relaxed">
-              A full refund is available upon cancellation <strong className="text-[#1c2b4b]">120 days or more</strong> prior
+              A full refund is available upon cancellation <strong className="text-[#000000]">120 days or more</strong> prior
               to the tour start date. All other cancellations will be applied as a credit toward a future
-              culinary experience. A <strong className="text-[#1c2b4b]">$470 administrative fee</strong> will be
+              culinary experience. A <strong className="text-[#000000]">$470 administrative fee</strong> will be
               deducted from the payment amount.
             </p>
           </div>
 
           <div className="bg-white border border-[#ede5d5] p-6">
-            <h3 className="font-serif text-lg text-[#1c2b4b] mb-2">Trip Change Policy</h3>
+            <h3 className="font-serif text-lg text-[#000000] mb-2">Trip Change Policy</h3>
             <p className="text-[#7a8090] text-sm leading-relaxed">
               Payment made may be applied toward a future tour date.
             </p>
           </div>
 
           <div className="bg-white border border-[#ede5d5] p-6">
-            <h3 className="font-serif text-lg text-[#1c2b4b] mb-2">Groups of 5+</h3>
+            <h3 className="font-serif text-lg text-[#000000] mb-2">Groups of 5+</h3>
             <p className="text-[#7a8090] text-sm leading-relaxed">
               Custom itineraries and alternate dates are available for groups of 5 or more.{" "}
               <Link href="/contact" className="text-[#b8924a] hover:underline">
@@ -162,7 +162,7 @@ export default function PricingPage() {
       {/* Final CTA */}
       <section className="bg-[#b8924a] py-16 px-6 text-center">
         <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to Book?</h2>
-        <p className="text-[#1c2b4b]/70 mb-8">
+        <p className="text-[#000000]/70 mb-8">
           Early bird pricing ends March 9th, 2026. Don&apos;t miss it.
         </p>
         <a

@@ -47,20 +47,20 @@ export default function VillaCarousel({ images, villaName }: VillaCarouselProps)
         <button
           onClick={() => prev()}
           aria-label="Previous photo"
-          className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#1c2b4b]/60 text-[#fdfaf4] w-9 h-9 flex items-center justify-center hover:bg-[#1c2b4b]/90 transition-colors"
+          className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#000000]/60 text-[#fdfaf4] w-9 h-9 flex items-center justify-center hover:bg-[#000000]/90 transition-colors"
         >
           ‹
         </button>
         <button
           onClick={() => { setPaused(true); next(); }}
           aria-label="Next photo"
-          className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#1c2b4b]/60 text-[#fdfaf4] w-9 h-9 flex items-center justify-center hover:bg-[#1c2b4b]/90 transition-colors"
+          className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#000000]/60 text-[#fdfaf4] w-9 h-9 flex items-center justify-center hover:bg-[#000000]/90 transition-colors"
         >
           ›
         </button>
 
         {/* Counter */}
-        <div className="absolute bottom-3 right-4 bg-[#1c2b4b]/60 text-[#fdfaf4] text-xs px-2 py-1 tracking-widest">
+        <div className="absolute bottom-3 right-4 bg-[#000000]/60 text-[#fdfaf4] text-xs px-2 py-1 tracking-widest">
           {current + 1} / {images.length}
         </div>
       </div>

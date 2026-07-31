@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1c2b4b] text-[#7a8090] py-14 px-6 text-center">
+    <footer className="bg-[#000000] text-[#7a8090] py-14 px-6 text-center">
       <div className="flex justify-center mb-8">
         <Image
           src="/logos/logo-bw.png"

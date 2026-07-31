@@ -10,7 +10,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#1c2b4b] py-20 px-6 text-center">
+      <section className="bg-[#000000] py-20 px-6 text-center">
         <h1 className="sr-only">Contact — Chef Rocco Garibaldi Sicily Tour</h1>
         <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Get in Touch</p>
         <p className="text-[#fdf6ed] font-serif text-3xl md:text-4xl mb-4">Contact Us</p>
@@ -24,7 +24,7 @@ export default function ContactPage() {
       <section className="max-w-5xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-16">
         {/* Info */}
         <div>
-          <h2 className="font-serif text-3xl text-[#1c2b4b] mb-8">Reach Rocco&apos;s</h2>
+          <h2 className="font-serif text-3xl text-[#000000] mb-8">Reach Rocco&apos;s</h2>
 
           <div className="space-y-6">
             <div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
 
         {/* Form */}
         <div>
-          <h2 className="font-serif text-3xl text-[#1c2b4b] mb-8">Send an Inquiry</h2>
+          <h2 className="font-serif text-3xl text-[#000000] mb-8">Send an Inquiry</h2>
           <form
             action="mailto:mfiala55555@gmail.com"
             method="get"
@@ -72,7 +72,7 @@ export default function ContactPage() {
             className="space-y-5"
           >
             <div>
-              <label htmlFor="name" className="block text-[#1c2b4b] text-xs tracking-widest uppercase mb-2">
+              <label htmlFor="name" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
                 Full Name
               </label>
               <input
@@ -81,12 +81,12 @@ export default function ContactPage() {
                 type="text"
                 required
                 placeholder="Your name"
-                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#1c2b4b] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
+                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-[#1c2b4b] text-xs tracking-widest uppercase mb-2">
+              <label htmlFor="email" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
                 Email Address
               </label>
               <input
@@ -95,18 +95,18 @@ export default function ContactPage() {
                 type="email"
                 required
                 placeholder="your@email.com"
-                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#1c2b4b] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
+                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
               />
             </div>
 
             <div>
-              <label htmlFor="travelers" className="block text-[#1c2b4b] text-xs tracking-widest uppercase mb-2">
+              <label htmlFor="travelers" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
                 Number of Travelers
               </label>
               <select
                 id="travelers"
                 name="travelers"
-                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#1c2b4b] focus:outline-none focus:border-[#b8924a] transition-colors"
+                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#b8924a] transition-colors"
               >
                 <option value="1">1 (single room supplement applies)</option>
                 <option value="2" selected>2</option>
@@ -117,7 +117,7 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-[#1c2b4b] text-xs tracking-widest uppercase mb-2">
+              <label htmlFor="message" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
                 Message
               </label>
               <textarea
@@ -125,7 +125,7 @@ export default function ContactPage() {
                 name="message"
                 rows={5}
                 placeholder="Questions, group details, dietary needs, anything else..."
-                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#1c2b4b] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors resize-none"
+                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors resize-none"
               />
             </div>
 
