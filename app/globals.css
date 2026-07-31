@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --navy:       #1c2b4b;
+  --gold:       #b8924a;
+  --gold-light: #c9a45a;
+  --olive:      #4a6b3a;
+  --cream:      #fdfaf4;
+  --parchment:  #ede5d5;
+  --parchment-dark: #ddd0bc;
+  --stone:      #7a8090;
+  --muted:      #9a9080;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--navy);
+  font-family: var(--font-cormorant), Georgia, 'Times New Roman', serif;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cormorant), Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+}

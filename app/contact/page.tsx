@@ -1,0 +1,143 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact — Rocco's Italy",
+  description:
+    "Get in touch with Chef Rocco Garibaldi about the Southern Italy Epicurean Experience. Group bookings, custom itineraries, and general inquiries welcome.",
+};
+
+export default function ContactPage() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="bg-[#1c2b4b] py-20 px-6 text-center">
+        <h1 className="sr-only">Contact — Chef Rocco Garibaldi Sicily Tour</h1>
+        <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Get in Touch</p>
+        <p className="text-[#fdf6ed] font-serif text-3xl md:text-4xl mb-4">Contact Us</p>
+        <p className="text-[#b0a090] text-lg max-w-xl mx-auto">
+          Questions about the tour, group bookings, or custom itineraries?
+          We&apos;d love to hear from you.
+        </p>
+      </section>
+
+      {/* Content */}
+      <section className="max-w-5xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-16">
+        {/* Info */}
+        <div>
+          <h2 className="font-serif text-3xl text-[#1c2b4b] mb-8">Reach Rocco&apos;s</h2>
+
+          <div className="space-y-6">
+            <div>
+              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Ready to Book?</p>
+              <p className="text-[#8c7b6b] text-sm leading-relaxed">
+                Use our booking form to secure your spot. Early bird pricing ($5,600 pp) is
+                available through March 9th, 2026.
+              </p>
+              <a
+                href="https://form.jotform.com/242294677009059"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-3 bg-[#b8924a] text-white px-6 py-3 text-sm tracking-widest uppercase hover:bg-[#b8924a] transition-colors"
+              >
+                Book Italy
+              </a>
+            </div>
+
+            <div className="border-t border-[#ede5d5] pt-6">
+              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Groups of 5+</p>
+              <p className="text-[#8c7b6b] text-sm leading-relaxed">
+                Custom itineraries and alternate dates are available for groups of 5 or more.
+                Use the inquiry form to tell us about your group and we&apos;ll be in touch.
+              </p>
+            </div>
+
+            <div className="border-t border-[#ede5d5] pt-6">
+              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">About Rocco&apos;s</p>
+              <p className="text-[#8c7b6b] text-sm leading-relaxed">
+                Rocco&apos;s Pizza Pub is located on the Big Island of Hawai&apos;i. Our Italy tour is
+                a natural extension of a 45-year family legacy rooted in Southern Italian cuisine,
+                tradition, and hospitality.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Form */}
+        <div>
+          <h2 className="font-serif text-3xl text-[#1c2b4b] mb-8">Send an Inquiry</h2>
+          <form
+            action="mailto:mfiala55555@gmail.com"
+            method="get"
+            encType="text/plain"
+            className="space-y-5"
+          >
+            <div>
+              <label htmlFor="name" className="block text-[#1c2b4b] text-xs tracking-widest uppercase mb-2">
+                Full Name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                placeholder="Your name"
+                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#1c2b4b] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="email" className="block text-[#1c2b4b] text-xs tracking-widest uppercase mb-2">
+                Email Address
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                placeholder="your@email.com"
+                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#1c2b4b] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="travelers" className="block text-[#1c2b4b] text-xs tracking-widest uppercase mb-2">
+                Number of Travelers
+              </label>
+              <select
+                id="travelers"
+                name="travelers"
+                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#1c2b4b] focus:outline-none focus:border-[#b8924a] transition-colors"
+              >
+                <option value="1">1 (single room supplement applies)</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5+">5+ (group — custom itinerary available)</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="message" className="block text-[#1c2b4b] text-xs tracking-widest uppercase mb-2">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows={5}
+                placeholder="Questions, group details, dietary needs, anything else..."
+                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#1c2b4b] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors resize-none"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-[#b8924a] text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#b8924a] transition-colors"
+            >
+              Send Inquiry
+            </button>
+          </form>
+        </div>
+      </section>
+    </>
+  );
+}
