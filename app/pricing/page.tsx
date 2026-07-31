@@ -56,7 +56,7 @@ export default function PricingPage() {
               Payment secures your reservation based on availability.
             </p>
             <a
-              href="https://form.jotform.com/242294677009059"
+              href="/contact"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center bg-[#b8924a] text-[#fdfaf4] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#c9a45a] transition-colors"
@@ -75,7 +75,7 @@ export default function PricingPage() {
               based on availability.
             </p>
             <a
-              href="https://form.jotform.com/242294677009059"
+              href="/contact"
               target="_blank"
               rel="noopener noreferrer"
               className="block text-center border border-[#000000] text-[#000000] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#000000] hover:text-[#fdfaf4] transition-colors"
@@ -166,7 +166,7 @@ export default function PricingPage() {
           Early bird pricing ends March 9th, 2026. Don&apos;t miss it.
         </p>
         <a
-          href="https://form.jotform.com/242294677009059"
+          href="/contact"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-white text-[#b8924a] px-12 py-4 text-sm tracking-widest uppercase font-semibold hover:bg-[#ede5d5] transition-colors"

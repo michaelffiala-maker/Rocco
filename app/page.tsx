@@ -22,7 +22,7 @@ export default function Home() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://form.jotform.com/242294677009059"
+            href="/contact"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#b8924a] text-[#fdfaf4] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#c9a45a] transition-colors"
@@ -99,7 +99,7 @@ export default function Home() {
           Groups of 5+ can request custom itineraries and dates.
         </p>
         <a
-          href="https://form.jotform.com/242294677009059"
+          href="/contact"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-[#000000] text-[#fdfaf4] px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"

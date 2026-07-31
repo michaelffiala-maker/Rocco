@@ -42,7 +42,7 @@ export default function Nav() {
         </ul>
 
         <a
-          href="https://form.jotform.com/242294677009059"
+          href="/contact"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-block border border-[#b8924a] text-[#b8924a] text-xs px-5 py-2 tracking-[0.2em] uppercase hover:bg-[#b8924a] hover:text-[#fdfaf4] transition-colors"
@@ -83,7 +83,7 @@ export default function Nav() {
             ))}
             <li>
               <a
-                href="https://form.jotform.com/242294677009059"
+                href="/contact"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block border border-[#b8924a] text-[#b8924a] text-xs px-5 py-2 tracking-[0.2em] uppercase"

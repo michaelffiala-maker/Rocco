@@ -187,7 +187,7 @@ export default function ExperiencePage() {
         <p className="text-[#000000]/70 mb-8">September 1–10, 2026 · Limited spots available</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://form.jotform.com/242294677009059"
+            href="/contact"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-[#000000] text-[#fdfaf4] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"

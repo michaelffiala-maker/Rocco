@@ -244,7 +244,7 @@ export default function ItineraryPage() {
         <h2 className="font-serif text-3xl md:text-4xl text-[#000000] mb-4">Secure Your Spot</h2>
         <p className="text-[#000000]/70 mb-8">Early bird $5,600 pp · Book by March 9th, 2026</p>
         <a
-          href="https://form.jotform.com/242294677009059"
+          href="/contact"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-[#000000] text-[#fdfaf4] px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"

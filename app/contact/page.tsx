@@ -44,7 +44,7 @@ export default function ContactPage() {
                 available through March 9th, 2026.
               </p>
               <a
-                href="https://form.jotform.com/242294677009059"
+                href="/contact"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block mt-3 bg-[#b8924a] text-white px-6 py-3 text-sm tracking-widest uppercase hover:bg-[#b8924a] transition-colors"

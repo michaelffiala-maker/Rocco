@@ -24,7 +24,7 @@ export default function Footer() {
         </a>{" "}
         or{" "}
         <a
-          href="https://form.jotform.com/242294677009059"
+          href="/contact"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#b8924a] hover:underline"
