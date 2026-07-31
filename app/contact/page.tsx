@@ -66,7 +66,7 @@ export default function ContactPage() {
         <div>
           <h2 className="font-serif text-3xl text-[#000000] mb-8">Send an Inquiry</h2>
           <form
-            action="mailto:mfiala55555@gmail.com"
+            action="mailto:rocco@roccospizzapub.com"
             method="get"
             encType="text/plain"
             className="space-y-5"
