@@ -1,12 +1,22 @@
-import type { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Contact — Rocco's Italy",
-  description:
-    "Get in touch with Chef Rocco Garibaldi about the Southern Italy Epicurean Experience. Group bookings, custom itineraries, and general inquiries welcome.",
-};
+import { useState } from "react";
 
 export default function ContactPage() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [travelers, setTravelers] = useState("2");
+  const [message, setMessage] = useState("");
+
+  function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const subject = encodeURIComponent("Italy Tour Inquiry");
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nTravelers: ${travelers}\n\nMessage:\n${message}`
+    );
+    window.location.href = `mailto:rocco@roccospizzapub.com?subject=${subject}&body=${body}`;
+  }
+
   return (
     <>
       {/* Hero */}
@@ -65,22 +75,18 @@ export default function ContactPage() {
         {/* Form */}
         <div>
           <h2 className="font-serif text-3xl text-[#000000] mb-8">Send an Inquiry</h2>
-          <form
-            action="mailto:rocco@roccospizzapub.com"
-            method="get"
-            encType="text/plain"
-            className="space-y-5"
-          >
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label htmlFor="name" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
                 Full Name
               </label>
               <input
                 id="name"
-                name="name"
                 type="text"
                 required
                 placeholder="Your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
               />
             </div>
@@ -91,10 +97,11 @@ export default function ContactPage() {
               </label>
               <input
                 id="email"
-                name="email"
                 type="email"
                 required
                 placeholder="your@email.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
               />
             </div>
@@ -105,11 +112,12 @@ export default function ContactPage() {
               </label>
               <select
                 id="travelers"
-                name="travelers"
+                value={travelers}
+                onChange={(e) => setTravelers(e.target.value)}
                 className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#b8924a] transition-colors"
               >
                 <option value="1">1 (single room supplement applies)</option>
-                <option value="2" selected>2</option>
+                <option value="2">2</option>
                 <option value="3">3</option>
                 <option value="4">4</option>
                 <option value="5+">5+ (group — custom itinerary available)</option>
@@ -122,16 +130,17 @@ export default function ContactPage() {
               </label>
               <textarea
                 id="message"
-                name="message"
                 rows={5}
                 placeholder="Questions, group details, dietary needs, anything else..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors resize-none"
               />
             </div>
 
             <button
               type="submit"
-              className="w-full bg-[#b8924a] text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#b8924a] transition-colors"
+              className="w-full bg-[#b8924a] text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#c9a45a] transition-colors"
             >
               Send Inquiry
             </button>
