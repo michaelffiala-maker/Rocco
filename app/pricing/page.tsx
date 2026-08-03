@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Pricing & Book — Rocco's Italy",
   description:
-    "Tour pricing for the Southern Italy Epicurean Experience. Early bird $5,600 per person. Book by March 9th, 2026.",
+    "Pricing for the Southern Italy Epicurean Experience with Chef Rocco Garibaldi. Early bird $5,600 per person. Book by March 9th, 2026.",
 };
 
 const included = [
@@ -13,12 +13,12 @@ const included = [
   "All excursion transportation",
   "Welcome Prosecco toast & aperitivo",
   "All meals (except during free-time periods)",
-  "All wine, beer & cocktails throughout the tour",
+  "All wine, beer & cocktails throughout the experience",
   "Chef lunches & dinners with wine/beer pairings",
   "Hands-on cooking lessons — pasta, pizza, chef course",
   "Wood-fired pizza party at the villa",
   "Festa Della Pizza — Italian Pizza Festival",
-  "Winery tours & tastings",
+  "Winery visits & tastings",
   "Sunset aperitivo at Al Chiosco",
   "Live music",
   "Saltwater pool & gym at the villa",
@@ -33,7 +33,7 @@ export default function PricingPage() {
     <>
       {/* Hero */}
       <section className="bg-[#000000] py-20 px-6 text-center">
-        <h1 className="sr-only">Pricing & Book — Chef Rocco Garibaldi Sicily Tour</h1>
+        <h1 className="sr-only">Pricing & Book — Chef Rocco Garibaldi Sicily Experience</h1>
         <p className="text-[#c9a45a] text-xs tracking-[0.3em] uppercase mb-3">Invest in the Experience</p>
         <p className="text-[#b0a090] text-lg max-w-xl mx-auto">
           All-inclusive. No hidden fees. Every detail covered.
@@ -133,7 +133,7 @@ export default function PricingPage() {
             <h3 className="font-serif text-lg text-[#000000] mb-2">Cancellation Policy</h3>
             <p className="text-[#7a8090] text-sm leading-relaxed">
               A full refund is available upon cancellation <strong className="text-[#000000]">120 days or more</strong> prior
-              to the tour start date. All other cancellations will be applied as a credit toward a future
+              to the experience start date. All other cancellations will be applied as a credit toward a future
               culinary experience. A <strong className="text-[#000000]">$470 administrative fee</strong> will be
               deducted from the payment amount.
             </p>
@@ -142,7 +142,7 @@ export default function PricingPage() {
           <div className="bg-white border border-[#ede5d5] p-6">
             <h3 className="font-serif text-lg text-[#000000] mb-2">Trip Change Policy</h3>
             <p className="text-[#7a8090] text-sm leading-relaxed">
-              Payment made may be applied toward a future tour date.
+              Payment made may be applied toward a future experience date.
             </p>
           </div>
 

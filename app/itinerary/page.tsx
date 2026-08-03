@@ -111,10 +111,10 @@ const days = [
     date: "Tuesday, September 8, 2026",
     title: "Abbazia Santa Anastasia Winery & Craft Cocktail Evening",
     location: "Cefalù",
-    highlights: ["Winery Cellar Tour", "Artisan Meat & Cheese Pairing", "Apericena & Craft Cocktails with Mixologist Matteo"],
+    highlights: ["Winery Cellar Visit", "Artisan Meat & Cheese Pairing", "Apericena & Craft Cocktails with Mixologist Matteo"],
     details: [
       "Light Breakfast at your Villa in Cefalù",
-      "Early afternoon visit to Abbazia Santa Anastasia Winery — tour of the wine cellar and tasting",
+      "Early afternoon visit to Abbazia Santa Anastasia Winery — explore the wine cellar and tasting",
       "Tasting Course: Local Artisan Meats & Cheeses paired with Sicilian wines",
       "Dinner: Apericena & Craft Cocktails with Chefs Rocco, Roberto, Ryan, and Guest Mixologist Matteo",
       "Retire for the evening at your Villa",
@@ -163,7 +163,7 @@ export default function ItineraryPage() {
     <>
       {/* Hero */}
       <section className="bg-[#000000] py-20 px-6 text-center">
-        <h1 className="sr-only">Itinerary — Chef Rocco Garibaldi Sicily Tour</h1>
+        <h1 className="sr-only">Itinerary — Chef Rocco Garibaldi Sicily Experience</h1>
         <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Day by Day</p>
         <p className="text-[#ede5d5]/80 text-lg max-w-xl mx-auto">
           September 1–10, 2026 · Cefalù & Taormina, Sicily

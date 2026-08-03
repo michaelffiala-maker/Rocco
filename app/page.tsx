@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const highlights = [
   { title: "Hands-On Cooking", desc: "Pasta making, pizza parties, and chef-led dinners in your private villa" },
-  { title: "Winery Tours", desc: "Tastings at Abbazia Santa Anastasia and local Sicilian wineries" },
+  { title: "Winery Visits", desc: "Tastings at Abbazia Santa Anastasia and local Sicilian wineries" },
   { title: "Sicily & Taormina", desc: "Cefalù's coastline, Taormina's hilltop views, and Mt. Etna on the horizon" },
   { title: "4 World-Class Chefs", desc: "Chef Rocco, Roberto, Ryan & Keo guide every culinary moment" },
   { title: "History & Culture", desc: "Ancient theaters, medieval castles, open-air markets, and Cathedral piazzas" },
@@ -79,7 +79,7 @@ export default function Home() {
           <p className="text-[#ede5d5]/80 text-lg leading-relaxed mb-10">
             Now, we invite you to travel with us back to the source — the villages,
             vineyards, and kitchens of Southern Italy where it all began. This isn&apos;t
-            just a tour. It&apos;s a homecoming.
+            just a visit. It&apos;s a homecoming.
           </p>
           <Link
             href="/story"

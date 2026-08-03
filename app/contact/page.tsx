@@ -10,7 +10,7 @@ export default function ContactPage() {
 
   function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
-    const subject = encodeURIComponent("Italy Tour Inquiry");
+    const subject = encodeURIComponent("Italy Experience Inquiry");
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nTravelers: ${travelers}\n\nMessage:\n${message}`
     );
@@ -21,11 +21,11 @@ export default function ContactPage() {
     <>
       {/* Hero */}
       <section className="bg-[#000000] py-20 px-6 text-center">
-        <h1 className="sr-only">Contact — Chef Rocco Garibaldi Sicily Tour</h1>
+        <h1 className="sr-only">Contact — Chef Rocco Garibaldi Sicily Experience</h1>
         <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Get in Touch</p>
         <p className="text-[#fdf6ed] font-serif text-3xl md:text-4xl mb-4">Contact Us</p>
         <p className="text-[#b0a090] text-lg max-w-xl mx-auto">
-          Questions about the tour, group bookings, or custom itineraries?
+          Questions about the experience, group bookings, or custom itineraries?
           We&apos;d love to hear from you.
         </p>
       </section>
@@ -64,7 +64,7 @@ export default function ContactPage() {
             <div className="border-t border-[#ede5d5] pt-6">
               <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">About Rocco&apos;s</p>
               <p className="text-[#8c7b6b] text-sm leading-relaxed">
-                Rocco&apos;s Pizza Pub is located on the Big Island of Hawai&apos;i. Our Italy tour is
+                Rocco&apos;s Pizza Pub is located on the Big Island of Hawai&apos;i. Our Italy experience is
                 a natural extension of a 45-year family legacy rooted in Southern Italian cuisine,
                 tradition, and hospitality.
               </p>

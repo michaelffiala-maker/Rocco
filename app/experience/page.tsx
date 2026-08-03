@@ -5,7 +5,7 @@ import VillaCarousel from "../components/VillaCarousel";
 export const metadata: Metadata = {
   title: "The Experience — Chef Rocco Garibaldi Sicily",
   description:
-    "Learn what's included in the Southern Italy Epicurean Experience with Chef Rocco Garibaldi — cooking lessons, winery tours, villa stays, and more.",
+    "Learn what's included in the Southern Italy Epicurean Experience with Chef Rocco Garibaldi — cooking lessons, winery visits, villa stays, and more.",
 };
 
 const chefs = [
@@ -37,12 +37,12 @@ const included = [
   "All excursion transportation",
   "Welcome Prosecco toast & aperitivo",
   "Breakfast, lunch & dinner (except during free-time periods)",
-  "All wine, beer & cocktails throughout the tour",
+  "All wine, beer & cocktails throughout the experience",
   "Chef-led lunches with wine/beer pairings",
   "Chef-led dinners with wine/beer pairings",
   "Wood-fired pizza party at the villa",
   "Pizza Festival — Festa Della Pizza",
-  "Winery tours & tastings (Abbazia Santa Anastasia & more)",
+  "Winery visits & tastings (Abbazia Santa Anastasia & more)",
   "Sunset aperitivo at Al Chiosco",
   "Live music",
   "Saltwater pool & gym at the villa",
@@ -70,7 +70,7 @@ export default function ExperiencePage() {
       <section className="max-w-5xl mx-auto px-6 py-24">
         <div className="text-center mb-14">
           <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Everything Covered</p>
-          <h2 className="font-serif text-4xl text-[#000000]">All-Inclusive Tour Highlights</h2>
+          <h2 className="font-serif text-4xl text-[#000000]">All-Inclusive Experience Highlights</h2>
           <div className="w-12 h-px bg-[#b8924a] mx-auto mt-5" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
