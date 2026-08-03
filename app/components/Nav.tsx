@@ -29,12 +29,12 @@ export default function Nav() {
         </Link>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-4">
           {links.map((l) => (
             <li key={l.href}>
               <Link
                 href={l.href}
-                className="text-[#ede5d5] text-xs tracking-[0.2em] uppercase hover:text-[#b8924a] transition-colors"
+                className="text-[#ede5d5] text-[10px] tracking-[0.1em] uppercase whitespace-nowrap hover:text-[#b8924a] transition-colors"
               >
                 {l.label}
               </Link>
@@ -44,9 +44,7 @@ export default function Nav() {
 
         <a
           href="/contact"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-block border border-[#b8924a] text-[#b8924a] text-xs px-5 py-2 tracking-[0.2em] uppercase hover:bg-[#b8924a] hover:text-[#fdfaf4] transition-colors"
+          className="hidden md:inline-block border border-[#b8924a] text-[#b8924a] text-[10px] px-4 py-2 tracking-[0.1em] uppercase whitespace-nowrap hover:bg-[#b8924a] hover:text-[#fdfaf4] transition-colors"
         >
           Book Italy
         </a>
