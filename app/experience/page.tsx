@@ -12,22 +12,20 @@ const chefs = [
   {
     name: "Chef Rocco Garibaldi",
     role: "Host & Pizzaiolo",
-    bio: "Owner of Rocco's Pizza Pub on the Big Island of Hawai'i, Rocco carries on a 45-year family legacy started by his father Joe. A passionate Pizzaiolo and host, he brings warmth, humor, and deep culinary knowledge to every experience.",
+    bio: "Owner of Rocco's Pizza Pub on the Big Island of Hawai'i, Rocco carries on a 45-year family legacy started by his father Joe. A passionate Pizzaiolo and host, she brings warmth, humor, and deep culinary knowledge to every experience.",
+    href: "/story",
   },
   {
     name: "Chef Roberto",
     role: "Chef & Pizzaiolo",
     bio: "Co-owner of Rocco's Pizza Pub and Rocco's right hand, Roberto brings his Sicilian roots and expert pizza craft to the villa kitchen. He also leads the legendary hike up La Rocca di Cefalù.",
+    href: "/chefs/roberto",
   },
   {
     name: "Chef Ryan",
     role: "Master Pastaio",
-    bio: "Traveling from Rome, Italy, Ryan is a master pasta maker whose Sicilian pasta sessions are a highlight of the trip. His pasta-making class is an unforgettable hands-on experience.",
-  },
-  {
-    name: "Chef Keo",
-    role: "Chef",
-    bio: "The newest addition to the culinary group, Chef Keo joins from America to bring fresh creative energy to the kitchen and add to the richness of every shared meal.",
+    bio: "Traveling from Rome, Italy, Ryan is a master pasta maker whose Sicilian pasta sessions are a highlight of the experience. His pasta-making class is an unforgettable hands-on journey into the heart of Italian cuisine.",
+    href: "/chefs/ryan",
   },
 ];
 
@@ -91,14 +89,21 @@ export default function ExperiencePage() {
             <h2 className="font-serif text-4xl text-[#000000]">Meet the Chefs</h2>
             <div className="w-12 h-px bg-[#b8924a] mx-auto mt-5" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {chefs.map((chef) => (
-              <div key={chef.name} className="bg-[#fdfaf4] border border-[#ddd0bc] p-8">
+              <Link
+                key={chef.name}
+                href={chef.href}
+                className="bg-[#fdfaf4] border border-[#ddd0bc] p-8 hover:border-[#b8924a] hover:shadow-md transition-all group flex flex-col"
+              >
                 <div className="w-8 h-px bg-[#b8924a] mb-5" />
                 <h3 className="font-serif text-xl text-[#000000] mb-1">{chef.name}</h3>
                 <p className="text-[#b8924a] text-xs tracking-[0.2em] uppercase mb-3">{chef.role}</p>
-                <p className="text-[#7a8090] text-sm leading-relaxed">{chef.bio}</p>
-              </div>
+                <p className="text-[#7a8090] text-sm leading-relaxed flex-1">{chef.bio}</p>
+                <p className="mt-6 text-[#b8924a] text-xs tracking-[0.2em] uppercase group-hover:underline">
+                  Click to Learn More →
+                </p>
+              </Link>
             ))}
           </div>
         </div>
