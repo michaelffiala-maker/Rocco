@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-[#000000] py-20 px-6 text-center">
+      <section className="bg-[#000000] pt-6 pb-20 px-6 text-center">
         <p className="text-[#ede5d5] text-base md:text-lg mb-3 tracking-wide italic font-light">
           Travel and experience the culinary traditions and beauty of the Old Country
         </p>
