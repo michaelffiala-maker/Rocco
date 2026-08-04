@@ -14,7 +14,7 @@ export default function ContactPage() {
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nTravelers: ${travelers}\n\nMessage:\n${message}`
     );
-    window.location.href = `mailto:rocco@roccospizzapub.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:rocco@roccogaribaldi.com?subject=${subject}&body=${body}`;
   }
 
   return (
