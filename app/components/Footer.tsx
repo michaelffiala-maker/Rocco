@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[#000000] text-[#7a8090] py-14 px-6 text-center">
       <div className="flex justify-center mb-8">
         <Image
-          src="/logos/Full%20Logo.png"
+          src="/logos/logo-full.png"
           alt="Chef Rocco Garibaldi — Authentic Culinary Experiences in Sicily"
           width={560}
           height={560}
