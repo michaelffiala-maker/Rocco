@@ -36,7 +36,7 @@ export default function PricingPage() {
         <h1 className="sr-only">Pricing & Book — Chef Rocco Garibaldi Sicily Experience</h1>
         <p className="text-[#c9a45a] text-xs tracking-[0.3em] uppercase mb-3">Invest in the Experience</p>
         <p className="text-[#b0a090] text-lg max-w-xl mx-auto">
-          All-inclusive. No hidden fees. Every detail covered.
+          All-exclusive. No hidden fees. Every detail covered.
         </p>
       </section>
 

@@ -68,7 +68,7 @@ export default function ExperiencePage() {
       <section className="max-w-5xl mx-auto px-6 py-24">
         <div className="text-center mb-14">
           <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Everything Covered</p>
-          <h2 className="font-serif text-4xl text-[#000000]">All-Inclusive Experience Highlights</h2>
+          <h2 className="font-serif text-4xl text-[#000000]">All-Exclusive Experience Highlights</h2>
           <div className="w-12 h-px bg-[#b8924a] mx-auto mt-5" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
