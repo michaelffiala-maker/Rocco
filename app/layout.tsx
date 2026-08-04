@@ -29,13 +29,13 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-[#fdfaf4] text-[#000000]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
         <Nav />
         {/* Global black logo banner — top of every page */}
-        <div className="pt-16 bg-[#000000] flex justify-center py-8 px-6">
+        <div className="pt-16 bg-[#000000] flex justify-center items-center py-10 px-6">
           <Image
             src="/logos/logo-full.png"
             alt="Chef Rocco Garibaldi — Authentic Culinary Experiences in Sicily"
             width={560}
             height={560}
-            className="w-40 md:w-52 lg:w-60 h-auto"
+            className="w-60 md:w-80 lg:w-[360px] h-auto"
             priority
           />
         </div>
