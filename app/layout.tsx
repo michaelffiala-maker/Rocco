@@ -28,14 +28,14 @@ export default function RootLayout({
     <html lang="en" className={`h-full ${cormorant.variable}`}>
       <body className="min-h-full flex flex-col bg-[#fdfaf4] text-[#000000]" style={{ fontFamily: "var(--font-cormorant), Georgia, serif" }}>
         <Nav />
-        {/* Global white logo banner — top of every page */}
-        <div className="pt-16 bg-white border-b border-[#ede5d5] flex justify-center py-10 px-6">
+        {/* Global black logo banner — top of every page */}
+        <div className="pt-16 bg-[#000000] flex justify-center py-8 px-6">
           <Image
-            src="/logos/logo-horizontal.png"
+            src="/logos/logo-full.png"
             alt="Chef Rocco Garibaldi — Authentic Culinary Experiences in Sicily"
-            width={800}
-            height={220}
-            className="w-64 md:w-96 lg:w-[480px] h-auto"
+            width={560}
+            height={560}
+            className="w-40 md:w-52 lg:w-60 h-auto"
             priority
           />
         </div>
