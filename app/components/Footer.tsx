@@ -5,11 +5,11 @@ export default function Footer() {
     <footer className="bg-[#000000] text-[#7a8090] py-14 px-6 text-center">
       <div className="flex justify-center mb-8">
         <Image
-          src="/logos/logo-bw.png"
+          src="/logos/Full%20Logo.png"
           alt="Chef Rocco Garibaldi — Authentic Culinary Experiences in Sicily"
-          width={320}
-          height={200}
-          className="w-56 h-auto invert mix-blend-screen opacity-50"
+          width={560}
+          height={560}
+          className="w-48 md:w-56 h-auto opacity-90"
         />
       </div>
       <div className="w-16 h-px bg-[#b8924a] mx-auto mb-6" />

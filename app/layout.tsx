@@ -31,11 +31,11 @@ export default function RootLayout({
         {/* Global white logo banner — top of every page */}
         <div className="pt-16 bg-white border-b border-[#ede5d5] flex justify-center py-10 px-6">
           <Image
-            src="/logos/logo-primary.png"
+            src="/logos/Horizontal%20Logo.png"
             alt="Chef Rocco Garibaldi — Authentic Culinary Experiences in Sicily"
-            width={560}
-            height={640}
-            className="w-56 md:w-72 lg:w-80 h-auto"
+            width={800}
+            height={220}
+            className="w-64 md:w-96 lg:w-[480px] h-auto"
             priority
           />
         </div>
