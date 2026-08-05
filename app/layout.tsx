@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     siteName: "Chef Rocco Garibaldi",
     images: [
       {
-        url: "/logos/logo-full.png",
-        width: 560,
-        height: 560,
+        url: "/logos/logo-horizontal.png",
+        width: 800,
+        height: 220,
         alt: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
       },
     ],
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
     description:
       "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2026 in Sicily.",
-    images: ["/logos/logo-full.png"],
+    images: ["/logos/logo-horizontal.png"],
   },
 };
 
