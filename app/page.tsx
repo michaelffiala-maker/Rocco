@@ -4,7 +4,7 @@ const highlights = [
   { title: "Hands-On Cooking", desc: "Pasta making, pizza parties, and chef-led dinners in your private villa" },
   { title: "Winery Visits", desc: "Tastings at Abbazia Santa Anastasia and local Sicilian wineries" },
   { title: "Sicily & Taormina", desc: "Cefalù's coastline, Taormina's hilltop views, and Mt. Etna on the horizon" },
-  { title: "4 World-Class Chefs", desc: "Chef Rocco, Roberto, Ryan & Keo guide every culinary moment" },
+  { title: "3 World-Class Chefs", desc: "Chef Rocco, Roberto & Ryan guide every culinary moment" },
   { title: "History & Culture", desc: "Ancient theaters, medieval castles, open-air markets, and Cathedral piazzas" },
   { title: "Saltwater Villa", desc: "9 nights in private Sicilian villas with pools, sunsets, and aperitivo" },
 ];
