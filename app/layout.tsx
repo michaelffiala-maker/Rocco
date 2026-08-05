@@ -14,9 +14,33 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://roccogaribaldi.com"),
   title: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
   description:
     "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2026 in Sicily.",
+  openGraph: {
+    title: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
+    description:
+      "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2026 in Sicily.",
+    url: "https://roccogaribaldi.com",
+    siteName: "Chef Rocco Garibaldi",
+    images: [
+      {
+        url: "/logos/logo-full.png",
+        width: 560,
+        height: 560,
+        alt: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
+    description:
+      "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2026 in Sicily.",
+    images: ["/logos/logo-full.png"],
+  },
 };
 
 export default function RootLayout({
