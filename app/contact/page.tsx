@@ -1,12 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [travelers, setTravelers] = useState("2");
   const [message, setMessage] = useState("");
+  const youliRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!youliRef.current) return;
+    const script = document.createElement("script");
+    script.src =
+      "https://youli.io/embeds/script/trips/chef-rocco-garibaldi-culinary-experience/?view=card&tripid=34b779b8-749a-f111-9b33-000d3aff9d5c&style=detailed";
+    script.async = true;
+    youliRef.current.appendChild(script);
+  }, []);
 
   function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -51,6 +61,15 @@ export default function ContactPage() {
               >
                 Book Italy
               </a>
+            </div>
+
+            <div className="border-t border-[#ede5d5] pt-6">
+              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Book Around the World</p>
+              <p className="text-[#8c7b6b] text-sm leading-relaxed mb-4">
+                Chef Rocco is hosting culinary experiences beyond Sicily. Explore and reserve
+                upcoming trips below.
+              </p>
+              <div ref={youliRef} />
             </div>
 
             <div className="border-t border-[#ede5d5] pt-6">
