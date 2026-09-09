@@ -20,8 +20,8 @@ export default function Home() {
         <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-10">
           September 1 – 10, 2027 · Sicily, Italy
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center sm:items-center">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/contact"
               target="_blank"
@@ -30,21 +30,21 @@ export default function Home() {
             >
               Book Italy
             </a>
-            <Link
-              href="/itinerary"
-              className="border border-[#ede5d5]/60 text-[#ede5d5] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:border-[#ede5d5] transition-colors"
+            <a
+              href="https://youli.io/t/chef-rocco-garibaldi-culinary-experience/a-taste-of-sicily-with-chef-rocco-garibaldi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#b8924a] text-[#fdfaf4] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#c9a45a] transition-colors"
             >
-              View Itinerary
-            </Link>
+              Book Around the World
+            </a>
           </div>
-          <a
-            href="https://youli.io/t/chef-rocco-garibaldi-culinary-experience/a-taste-of-sicily-with-chef-rocco-garibaldi"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-[#b8924a] text-[#fdfaf4] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#c9a45a] transition-colors"
+          <Link
+            href="/itinerary"
+            className="border border-[#ede5d5]/60 text-[#ede5d5] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:border-[#ede5d5] transition-colors"
           >
-            Book Around the World
-          </a>
+            View Itinerary
+          </Link>
         </div>
       </section>
 
