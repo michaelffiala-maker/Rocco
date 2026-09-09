@@ -29,6 +29,14 @@ export default function Home() {
           >
             Book Italy
           </a>
+          <a
+            href="https://youli.io/t/chef-rocco-garibaldi-culinary-experience/a-taste-of-sicily-with-chef-rocco-garibaldi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-[#ede5d5]/60 text-[#ede5d5] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:border-[#ede5d5] transition-colors"
+          >
+            Book Around the World
+          </a>
           <Link
             href="/itinerary"
             className="border border-[#ede5d5]/60 text-[#ede5d5] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:border-[#ede5d5] transition-colors"
