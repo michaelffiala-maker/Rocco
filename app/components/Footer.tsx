@@ -16,7 +16,7 @@ export default function Footer() {
       <p className="text-sm tracking-[0.15em] uppercase text-[#ede5d5] mb-2">
         A Southern Italy Epicurean Experience
       </p>
-      <p className="text-sm mb-6">September 1–10, 2026 · Cefalù & Taormina, Sicily</p>
+      <p className="text-sm mb-6">September 1–10, 2027 · Cefalù & Taormina, Sicily</p>
       <p className="text-xs">
         Questions?{" "}
         <a href="/contact" className="text-[#b8924a] hover:underline">

@@ -5,7 +5,7 @@ import { useState } from "react";
 const days = [
   {
     day: 1,
-    date: "Tuesday, September 1, 2026",
+    date: "Wednesday, September 1, 2027",
     title: "Arrival in Sicily & Cena di Benvenuti",
     location: "Cefalù",
     highlights: ["Welcome Prosecco Toast & Aperitivo", "Welcome Dinner at the Villa"],
@@ -20,7 +20,7 @@ const days = [
   },
   {
     day: 2,
-    date: "Wednesday, September 2, 2026",
+    date: "Thursday, September 2, 2027",
     title: "Hands-On Pasta Making & Chef Lunch, Dinner in Cefalù",
     location: "Cefalù",
     highlights: ["Hands-On Pasta Making Session", "Wine Pairings", "Open Air Sicilian Dinner"],
@@ -34,7 +34,7 @@ const days = [
   },
   {
     day: 3,
-    date: "Thursday, September 3, 2026",
+    date: "Friday, September 3, 2027",
     title: "Day in Taormina & Open Air Dinner at the Villa",
     location: "Taormina",
     highlights: ["Teatro Antico Greco-Roman Theater", "Views of Mt. Etna", "Traditional Sicilian Dinner"],
@@ -50,7 +50,7 @@ const days = [
   },
   {
     day: 4,
-    date: "Friday, September 4, 2026",
+    date: "Saturday, September 4, 2027",
     title: "Free Day in Taormina",
     location: "Taormina",
     highlights: ["Isola Bella Beach", "Explore at Your Own Pace"],
@@ -63,7 +63,7 @@ const days = [
   },
   {
     day: 5,
-    date: "Saturday, September 5, 2026",
+    date: "Sunday, September 5, 2027",
     title: "Return to Cefalù, Villa Lunch & Sunset Aperitivo",
     location: "Cefalù",
     highlights: ["Villa Lunch by the Chefs", "Sunset Aperitivo at Al Chiosco"],
@@ -79,7 +79,7 @@ const days = [
   },
   {
     day: 6,
-    date: "Sunday, September 6, 2026",
+    date: "Monday, September 6, 2027",
     title: "Mercatino Visit, Wine Tasting & Pizza Party",
     location: "Cefalù",
     highlights: ["Local Market (Mercatino)", "Sicilian Wine Tasting", "Pizza Party at the Villa"],
@@ -93,7 +93,7 @@ const days = [
   },
   {
     day: 7,
-    date: "Monday, September 7, 2026",
+    date: "Tuesday, September 7, 2027",
     title: "La Rocca di Cefalù Hike & Chef Course Dinner",
     location: "Cefalù",
     highlights: ["Optional Hike — La Rocca (250m)", "Temple of Diana (4th Century BC)", "Chef Course Dinner Presentation"],
@@ -108,7 +108,7 @@ const days = [
   },
   {
     day: 8,
-    date: "Tuesday, September 8, 2026",
+    date: "Wednesday, September 8, 2027",
     title: "Abbazia Santa Anastasia Winery & Craft Cocktail Evening",
     location: "Cefalù",
     highlights: ["Winery Cellar Visit", "Artisan Meat & Cheese Pairing", "Apericena & Craft Cocktails with Mixologist Matteo"],
@@ -122,7 +122,7 @@ const days = [
   },
   {
     day: 9,
-    date: "Wednesday, September 9, 2026",
+    date: "Thursday, September 9, 2027",
     title: "Grape Harvest at the Vineyard & Festa Della Pizza",
     location: "Cefalù",
     highlights: ["Optional Grape Harvest — Rocco Garibaldi Vineyard", "Festa Della Pizza — Italian Pizza Festival"],
@@ -137,7 +137,7 @@ const days = [
   },
   {
     day: 10,
-    date: "Thursday, September 10, 2026",
+    date: "Friday, September 10, 2027",
     title: "Departure",
     location: "Cefalù → PMO",
     highlights: ["Final Breakfast at the Villa", "Saltwater Pool"],
@@ -166,7 +166,7 @@ export default function ItineraryPage() {
         <h1 className="sr-only">Itinerary — Chef Rocco Garibaldi Sicily Experience</h1>
         <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Day by Day</p>
         <p className="text-[#ede5d5]/80 text-lg max-w-xl mx-auto">
-          September 1–10, 2026 · Cefalù & Taormina, Sicily
+          September 1–10, 2027 · Cefalù & Taormina, Sicily
         </p>
       </section>
 
@@ -242,7 +242,7 @@ export default function ItineraryPage() {
       {/* CTA */}
       <section className="bg-[#b8924a] py-16 px-6 text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-[#000000] mb-4">Secure Your Spot</h2>
-        <p className="text-[#000000]/70 mb-8">Early bird $5,600 pp · Book by March 9th, 2026</p>
+        <p className="text-[#000000]/70 mb-8">Early bird $5,600 pp · Book by March 9th, 2027</p>
         <a
           href="/contact"
           target="_blank"

@@ -189,7 +189,7 @@ export default function ExperiencePage() {
       {/* CTA */}
       <section className="bg-[#b8924a] py-16 px-6 text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-[#000000] mb-4">Ready to Join Us?</h2>
-        <p className="text-[#000000]/70 mb-8">September 1–10, 2026 · Limited spots available</p>
+        <p className="text-[#000000]/70 mb-8">September 1–10, 2027 · Limited spots available</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="/contact"

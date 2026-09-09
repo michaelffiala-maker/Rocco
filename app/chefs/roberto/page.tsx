@@ -101,7 +101,7 @@ export default function ChefRobertoPage() {
           Join Us in Sicily
         </h2>
         <p className="text-[#000000]/70 mb-8 text-lg">
-          September 1–10, 2026 · Limited spots available
+          September 1–10, 2027 · Limited spots available
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://roccogaribaldi.com"),
   title: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
   description:
-    "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2026 in Sicily.",
+    "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2027 in Sicily.",
   openGraph: {
     title: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
     description:
-      "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2026 in Sicily.",
+      "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2027 in Sicily.",
     url: "https://roccogaribaldi.com",
     siteName: "Chef Rocco Garibaldi",
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary",
     title: "Chef Rocco Garibaldi — A Southern Italy Epicurean Experience",
     description:
-      "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2026 in Sicily.",
+      "Travel and experience the culinary traditions and beauty of Southern Italy with Chef Rocco Garibaldi. September 1–10, 2027 in Sicily.",
     images: ["/logos/logo-horizontal.png"],
   },
 };

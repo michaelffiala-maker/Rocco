@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Pricing & Book — Rocco's Italy",
   description:
-    "Pricing for the Southern Italy Epicurean Experience with Chef Rocco Garibaldi. Early bird $5,600 per person. Book by March 9th, 2026.",
+    "Pricing for the Southern Italy Epicurean Experience with Chef Rocco Garibaldi. Early bird $5,600 per person. Book by March 9th, 2027.",
 };
 
 const included = [
@@ -52,7 +52,7 @@ export default function PricingPage() {
             <p className="font-serif text-5xl text-[#000000] mb-1">$5,600</p>
             <p className="text-[#7a8090] text-sm mb-6">per person · double occupancy</p>
             <p className="text-[#000000] text-sm mb-8 leading-relaxed">
-              Book on or before <strong>March 9th, 2026</strong> to lock in this rate.
+              Book on or before <strong>March 9th, 2027</strong> to lock in this rate.
               Payment secures your reservation based on availability.
             </p>
             <a
@@ -71,7 +71,7 @@ export default function PricingPage() {
             <p className="font-serif text-5xl text-[#000000] mb-1">$6,500</p>
             <p className="text-[#7a8090] text-sm mb-6">per person · double occupancy</p>
             <p className="text-[#7a8090] text-sm mb-8 leading-relaxed">
-              Available after March 9th, 2026. Payment secures your reservation
+              Available after March 9th, 2027. Payment secures your reservation
               based on availability.
             </p>
             <a
@@ -163,7 +163,7 @@ export default function PricingPage() {
       <section className="bg-[#b8924a] py-16 px-6 text-center">
         <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to Book?</h2>
         <p className="text-[#000000]/70 mb-8">
-          Early bird pricing ends March 9th, 2026. Don&apos;t miss it.
+          Early bird pricing ends March 9th, 2027. Don&apos;t miss it.
         </p>
         <a
           href="/contact"

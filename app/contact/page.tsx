@@ -41,7 +41,7 @@ export default function ContactPage() {
               <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Ready to Book?</p>
               <p className="text-[#8c7b6b] text-sm leading-relaxed">
                 Use our booking form to secure your spot. Early bird pricing ($5,600 pp) is
-                available through March 9th, 2026.
+                available through March 9th, 2027.
               </p>
               <a
                 href="/contact"
