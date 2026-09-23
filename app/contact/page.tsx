@@ -82,14 +82,6 @@ export default function ContactPage() {
                 <div ref={youliSicilianTableRef} />
               </div>
             </div>
-
-            <div className="border-t border-[#ede5d5] pt-6">
-              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Groups of 5+</p>
-              <p className="text-[#8c7b6b] text-sm leading-relaxed">
-                Custom itineraries and alternate dates are available for groups of 5 or more.
-                Use the inquiry form to tell us about your group and we&apos;ll be in touch.
-              </p>
-            </div>
           </div>
         </div>
       </section>
