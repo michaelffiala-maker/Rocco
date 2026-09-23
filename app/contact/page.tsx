@@ -104,15 +104,6 @@ export default function ContactPage() {
                 Use the inquiry form to tell us about your group and we&apos;ll be in touch.
               </p>
             </div>
-
-            <div className="border-t border-[#ede5d5] pt-6">
-              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">About Rocco&apos;s</p>
-              <p className="text-[#8c7b6b] text-sm leading-relaxed">
-                Rocco&apos;s Pizza Pub is located on the Big Island of Hawai&apos;i. Our Italy experience is
-                a natural extension of a 45-year family legacy rooted in Southern Italian cuisine,
-                tradition, and hospitality.
-              </p>
-            </div>
           </div>
         </div>
       </section>
