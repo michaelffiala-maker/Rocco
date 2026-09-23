@@ -52,20 +52,33 @@ export default function Home() {
       </section>
 
       {/* Highlights grid */}
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="text-center mb-16">
-          <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-4">What Awaits You</p>
-          <h2 className="font-serif text-4xl md:text-5xl text-[#000000]">Ten Days of Pure Italy</h2>
-          <div className="w-16 h-px bg-[#b8924a] mx-auto mt-5" />
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {highlights.map((h) => (
-            <div key={h.title} className="bg-white border border-[#ede5d5] p-8 hover:shadow-lg hover:border-[#b8924a]/30 transition-all">
-              <div className="w-8 h-px bg-[#b8924a] mb-5" />
-              <h3 className="font-serif text-xl text-[#000000] mb-2">{h.title}</h3>
-              <p className="text-[#7a8090] text-sm leading-relaxed">{h.desc}</p>
-            </div>
-          ))}
+      <section className="relative overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/homepage-movie.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-[#fdfaf4]/80" />
+
+        <div className="relative max-w-6xl mx-auto px-6 py-24">
+          <div className="text-center mb-16">
+            <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-4">What Awaits You</p>
+            <h2 className="font-serif text-4xl md:text-5xl text-[#000000]">Ten Days of Pure Italy</h2>
+            <div className="w-16 h-px bg-[#b8924a] mx-auto mt-5" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            {highlights.map((h) => (
+              <div key={h.title} className="bg-white border border-[#ede5d5] p-8 hover:shadow-lg hover:border-[#b8924a]/30 transition-all">
+                <div className="w-8 h-px bg-[#b8924a] mb-5" />
+                <h3 className="font-serif text-xl text-[#000000] mb-2">{h.title}</h3>
+                <p className="text-[#7a8090] text-sm leading-relaxed">{h.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
