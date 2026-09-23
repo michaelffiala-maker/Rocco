@@ -66,9 +66,11 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-6 py-24">
           <div className="text-center mb-16">
-            <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-4">What Awaits You</p>
-            <h2 className="font-serif text-4xl md:text-5xl text-[#000000]">Ten Days of Pure Italy</h2>
-            <div className="w-16 h-px bg-[#b8924a] mx-auto mt-5" />
+            <div className="inline-block bg-[#fdfaf4]/90 backdrop-blur-sm px-10 py-8 shadow-sm">
+              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-4">What Awaits You</p>
+              <h2 className="font-serif text-4xl md:text-5xl text-[#000000]">Ten Days of Pure Italy</h2>
+              <div className="w-16 h-px bg-[#b8924a] mx-auto mt-5" />
+            </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {highlights.map((h) => (
