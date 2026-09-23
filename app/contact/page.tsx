@@ -95,8 +95,10 @@ export default function ContactPage() {
                 Chef Rocco is hosting culinary experiences beyond Sicily. Explore and reserve
                 upcoming trips below.
               </p>
-              <div ref={youliRef} />
-              <div ref={youliSicilianTableRef} className="mt-6" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div ref={youliRef} />
+                <div ref={youliSicilianTableRef} />
+              </div>
             </div>
 
             <div className="border-t border-[#ede5d5] pt-6">
