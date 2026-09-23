@@ -71,7 +71,7 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="max-w-3xl mx-auto px-6 py-24">
+      <section className="max-w-5xl mx-auto px-6 py-24">
         {/* Info */}
         <div>
           <h2 className="font-serif text-3xl text-[#000000] mb-8">Reach Rocco&apos;s</h2>
@@ -83,8 +83,10 @@ export default function ContactPage() {
                 Use our booking form to secure your spot. Early bird pricing ($5,600 pp) is
                 available through March 9th, 2027.
               </p>
-              <div ref={youliEpicureanRef} className="mt-4" />
-              <div ref={youliFlagshipRef} className="mt-6" />
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
+                <div ref={youliEpicureanRef} />
+                <div ref={youliFlagshipRef} />
+              </div>
             </div>
 
             <div className="border-t border-[#ede5d5] pt-6">
