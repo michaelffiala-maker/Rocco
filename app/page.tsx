@@ -23,9 +23,7 @@ export default function Home() {
         <div className="flex flex-col items-center gap-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/pricing"
               className="bg-[#b8924a] text-[#fdfaf4] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#c9a45a] transition-colors"
             >
               Book Italy
@@ -108,9 +106,7 @@ export default function Home() {
           Groups of 5+ can request custom itineraries and dates.
         </p>
         <a
-          href="/contact"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/pricing"
           className="inline-block bg-[#000000] text-[#fdfaf4] px-12 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#0d1829] transition-colors"
         >
           Book Italy Now

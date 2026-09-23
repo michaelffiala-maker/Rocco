@@ -43,7 +43,7 @@ export default function Nav() {
         </ul>
 
         <a
-          href="/contact"
+          href="/pricing"
           className="hidden md:inline-block border border-[#b8924a] text-[#b8924a] text-[10px] px-4 py-2 tracking-[0.1em] uppercase whitespace-nowrap hover:bg-[#b8924a] hover:text-[#fdfaf4] transition-colors"
         >
           Book Italy
@@ -82,9 +82,8 @@ export default function Nav() {
             ))}
             <li>
               <a
-                href="/contact"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/pricing"
+                onClick={() => setOpen(false)}
                 className="inline-block border border-[#b8924a] text-[#b8924a] text-xs px-5 py-2 tracking-[0.2em] uppercase"
               >
                 Book Italy

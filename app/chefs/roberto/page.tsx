@@ -104,7 +104,7 @@ export default function ChefRobertoPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="/contact"
+            href="/pricing"
             className="bg-[#000000] text-[#fdfaf4] px-10 py-4 text-xs tracking-[0.25em] uppercase hover:bg-[#000000]/80 transition-colors"
           >
             Book Italy

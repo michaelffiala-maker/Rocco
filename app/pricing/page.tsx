@@ -44,7 +44,7 @@ export default function PricingPage() {
       {/* Pricing cards */}
       <section className="max-w-5xl mx-auto px-6 py-24">
         {/* Ready to Book */}
-        <div className="mb-12">
+        <div id="ready-to-book" className="mb-12 scroll-mt-24">
           <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3 text-center">Ready to Book?</p>
           <ItalyTripCards />
         </div>
@@ -130,9 +130,7 @@ export default function PricingPage() {
           Spots are limited. Reserve your dates today.
         </p>
         <a
-          href="/contact"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="#ready-to-book"
           className="inline-block bg-white text-[#b8924a] px-12 py-4 text-sm tracking-widest uppercase font-semibold hover:bg-[#ede5d5] transition-colors"
         >
           Book Italy Now
