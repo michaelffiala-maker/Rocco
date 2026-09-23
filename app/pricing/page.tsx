@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ItalyTripCards from "./ItalyTripCards";
 
 export const metadata: Metadata = {
   title: "Pricing & Book — Rocco's Italy",
   description:
-    "Pricing for the Southern Italy Epicurean Experience with Chef Rocco Garibaldi. Early bird $5,600 per person. Book by March 9th, 2027.",
+    "Pricing for the Southern Italy Epicurean Experience with Chef Rocco Garibaldi. View trip dates and book your spot.",
 };
 
 const included = [
@@ -42,47 +43,10 @@ export default function PricingPage() {
 
       {/* Pricing cards */}
       <section className="max-w-5xl mx-auto px-6 py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {/* Early bird */}
-          <div className="border-2 border-[#b8924a] bg-white p-10 relative">
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#b8924a] text-[#fdfaf4] text-xs px-4 py-1 tracking-widest uppercase">
-              Best Value
-            </div>
-            <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">Early Bird</p>
-            <p className="font-serif text-5xl text-[#000000] mb-1">$5,600</p>
-            <p className="text-[#7a8090] text-sm mb-6">per person · double occupancy</p>
-            <p className="text-[#000000] text-sm mb-8 leading-relaxed">
-              Book on or before <strong>March 9th, 2027</strong> to lock in this rate.
-              Payment secures your reservation based on availability.
-            </p>
-            <a
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center bg-[#b8924a] text-[#fdfaf4] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#c9a45a] transition-colors"
-            >
-              Book at This Price
-            </a>
-          </div>
-
-          {/* Standard */}
-          <div className="border border-[#ede5d5] bg-white p-10">
-            <p className="text-[#7a8090] text-xs tracking-[0.3em] uppercase mb-3">Standard Rate</p>
-            <p className="font-serif text-5xl text-[#000000] mb-1">$6,500</p>
-            <p className="text-[#7a8090] text-sm mb-6">per person · double occupancy</p>
-            <p className="text-[#7a8090] text-sm mb-8 leading-relaxed">
-              Available after March 9th, 2027. Payment secures your reservation
-              based on availability.
-            </p>
-            <a
-              href="/contact"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center border border-[#000000] text-[#000000] px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#000000] hover:text-[#fdfaf4] transition-colors"
-            >
-              Book Now
-            </a>
-          </div>
+        {/* Ready to Book */}
+        <div className="mb-12">
+          <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3 text-center">Ready to Book?</p>
+          <ItalyTripCards />
         </div>
 
         {/* Single supplement */}

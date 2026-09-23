@@ -1,34 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [travelers, setTravelers] = useState("2");
   const [message, setMessage] = useState("");
-  const youliEpicureanRef = useRef<HTMLDivElement>(null);
-  const youliFlagshipRef = useRef<HTMLDivElement>(null);
   const youliRef = useRef<HTMLDivElement>(null);
   const youliSicilianTableRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!youliEpicureanRef.current) return;
-    const script = document.createElement("script");
-    script.src =
-      "https://youli.io/embeds/script/trips/chef-rocco-garibaldi-culinary-experience/?view=card&tripid=116be61d-7f9a-f111-9b33-000d3aff9d5c&style=detailed";
-    script.async = true;
-    youliEpicureanRef.current.appendChild(script);
-  }, []);
-
-  useEffect(() => {
-    if (!youliFlagshipRef.current) return;
-    const script = document.createElement("script");
-    script.src =
-      "https://youli.io/embeds/script/trips/chef-rocco-garibaldi-culinary-experience/?view=card&tripid=e28f8a28-0672-f011-8dc8-002248c0776b&style=detailed";
-    script.async = true;
-    youliFlagshipRef.current.appendChild(script);
-  }, []);
 
   useEffect(() => {
     if (!youliRef.current) return;
@@ -80,13 +61,15 @@ export default function ContactPage() {
             <div>
               <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Ready to Book?</p>
               <p className="text-[#8c7b6b] text-sm leading-relaxed">
-                Use our booking form to secure your spot. Early bird pricing ($5,600 pp) is
-                available through March 9th, 2027.
+                Early bird pricing ($5,600 pp) is available through March 9th, 2027. Visit
+                Pricing &amp; Book to see dates and reserve your spot.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-4">
-                <div ref={youliEpicureanRef} />
-                <div ref={youliFlagshipRef} />
-              </div>
+              <Link
+                href="/pricing"
+                className="inline-block mt-3 bg-[#b8924a] text-white px-6 py-3 text-sm tracking-widest uppercase hover:bg-[#c9a45a] transition-colors"
+              >
+                Pricing &amp; Book
+              </Link>
             </div>
 
             <div className="border-t border-[#ede5d5] pt-6">
