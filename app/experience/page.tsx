@@ -18,7 +18,7 @@ const chefs = [
   {
     name: "Chef Roberto",
     role: "Chef & Pizzaiolo",
-    bio: "Co-owner of Rocco's Pizza Pub and Rocco's right hand, Roberto brings his Sicilian roots and expert pizza craft to the villa kitchen. He also leads the legendary hike up La Rocca di Cefalù.",
+    bio: "Co-owner of Rocco's Pizza Pub and Rocco's right hand, Roberto brings expert pizza craft to the villa kitchen. He also leads the legendary hike up La Rocca di Cefalù.",
     href: "/chefs/roberto",
   },
   {

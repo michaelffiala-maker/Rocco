@@ -7,7 +7,7 @@ import path from "path";
 export const metadata: Metadata = {
   title: "Chef Roberto — Chef Rocco Garibaldi Sicily Experience",
   description:
-    "Meet Chef Roberto — Co-owner of Rocco's Pizza Pub, Sicilian-rooted Pizzaiolo, and guide for the La Rocca di Cefalù hike.",
+    "Meet Chef Roberto — Co-owner of Rocco's Pizza Pub, master Pizzaiolo, and guide for the La Rocca di Cefalù hike.",
 };
 
 export default function ChefRobertoPage() {
@@ -63,10 +63,9 @@ export default function ChefRobertoPage() {
             <p className="text-[#7a8090] text-lg leading-relaxed mb-6">
               Co-owner of Rocco&apos;s Pizza Pub on the Big Island of Hawai&apos;i and
               Rocco&apos;s closest collaborator, Roberto is the steady, skilled
-              heartbeat of the culinary team. Born with Sicilian roots running
-              deep, his understanding of authentic Italian technique — the
-              dough, the fire, the timing — is something that can only come
-              from a lifetime of immersion in the craft.
+              heartbeat of the culinary team. His command of authentic
+              technique — the dough, the fire, the timing — is something
+              that can only come from a lifetime of immersion in the craft.
             </p>
 
             <p className="text-[#7a8090] text-lg leading-relaxed mb-6">
