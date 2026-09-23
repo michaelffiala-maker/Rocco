@@ -122,20 +122,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-
-      {/* Final CTA */}
-      <section className="bg-[#b8924a] py-16 px-6 text-center">
-        <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to Book?</h2>
-        <p className="text-[#000000]/70 mb-8">
-          Spots are limited. Reserve your dates today.
-        </p>
-        <a
-          href="#ready-to-book"
-          className="inline-block bg-white text-[#b8924a] px-12 py-4 text-sm tracking-widest uppercase font-semibold hover:bg-[#ede5d5] transition-colors"
-        >
-          Book Italy Now
-        </a>
-      </section>
     </>
   );
 }
