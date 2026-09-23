@@ -62,7 +62,7 @@ export default function Home() {
         >
           <source src="/homepage-movie.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-[#fdfaf4]/80" />
+        <div className="absolute inset-0 bg-[#fdfaf4]/20" />
 
         <div className="relative max-w-6xl mx-auto px-6 py-24">
           <div className="text-center mb-16">
