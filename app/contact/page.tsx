@@ -8,6 +8,7 @@ export default function ContactPage() {
   const [travelers, setTravelers] = useState("2");
   const [message, setMessage] = useState("");
   const youliRef = useRef<HTMLDivElement>(null);
+  const youliSicilianTableRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!youliRef.current) return;
@@ -16,6 +17,15 @@ export default function ContactPage() {
       "https://youli.io/embeds/script/trips/chef-rocco-garibaldi-culinary-experience/?view=card&tripid=34b779b8-749a-f111-9b33-000d3aff9d5c&style=detailed";
     script.async = true;
     youliRef.current.appendChild(script);
+  }, []);
+
+  useEffect(() => {
+    if (!youliSicilianTableRef.current) return;
+    const script = document.createElement("script");
+    script.src =
+      "https://youli.io/embeds/script/trips/chef-rocco-garibaldi-culinary-experience/?view=card&tripid=f1c594c8-55b4-f111-a6a7-000d3a6daace&style=detailed";
+    script.async = true;
+    youliSicilianTableRef.current.appendChild(script);
   }, []);
 
   function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
@@ -70,6 +80,7 @@ export default function ContactPage() {
                 upcoming trips below.
               </p>
               <div ref={youliRef} />
+              <div ref={youliSicilianTableRef} className="mt-6" />
             </div>
 
             <div className="border-t border-[#ede5d5] pt-6">
