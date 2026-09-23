@@ -242,7 +242,7 @@ export default function ItineraryPage() {
       {/* CTA */}
       <section className="bg-[#b8924a] py-16 px-6 text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-[#000000] mb-4">Secure Your Spot</h2>
-        <p className="text-[#000000]/70 mb-8">Early bird $5,600 pp · Book by March 9th, 2027</p>
+        <p className="text-[#000000]/70 mb-8">September 1–10, 2027 · Cefalù &amp; Taormina, Sicily</p>
         <a
           href="/contact"
           target="_blank"

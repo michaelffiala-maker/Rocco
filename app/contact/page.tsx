@@ -61,8 +61,7 @@ export default function ContactPage() {
             <div>
               <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Ready to Book?</p>
               <p className="text-[#8c7b6b] text-sm leading-relaxed">
-                Early bird pricing ($5,600 pp) is available through March 9th, 2027. Visit
-                Pricing &amp; Book to see dates and reserve your spot.
+                Visit Pricing &amp; Book to see dates and reserve your spot.
               </p>
               <Link
                 href="/pricing"

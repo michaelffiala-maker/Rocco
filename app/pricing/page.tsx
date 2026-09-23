@@ -127,7 +127,7 @@ export default function PricingPage() {
       <section className="bg-[#b8924a] py-16 px-6 text-center">
         <h2 className="font-serif text-3xl md:text-4xl mb-4">Ready to Book?</h2>
         <p className="text-[#000000]/70 mb-8">
-          Early bird pricing ends March 9th, 2027. Don&apos;t miss it.
+          Spots are limited. Reserve your dates today.
         </p>
         <a
           href="/contact"

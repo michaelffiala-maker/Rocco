@@ -51,8 +51,7 @@ export default function Home() {
       {/* Dates banner */}
       <section className="bg-[#000000] border-y border-[#b8924a]/30 text-[#ede5d5] py-4 text-center">
         <p className="text-xs tracking-[0.3em] uppercase">
-          September 1–10, 2027 &nbsp;·&nbsp; Cefalù & Taormina, Sicily &nbsp;·&nbsp;{" "}
-          <span className="text-[#b8924a]">Early bird from $5,600 pp</span>
+          September 1–10, 2027 &nbsp;·&nbsp; Cefalù & Taormina, Sicily
         </p>
       </section>
 
@@ -104,7 +103,7 @@ export default function Home() {
       <section className="bg-[#b8924a] py-16 px-6 text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-[#000000] mb-4">Spots Are Limited</h2>
         <p className="text-[#000000]/70 mb-8 text-lg">
-          Early bird pricing available through March 9th, 2027.
+          Reserve your spot today.
           <br />
           Groups of 5+ can request custom itineraries and dates.
         </p>
