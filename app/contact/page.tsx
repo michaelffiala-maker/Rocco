@@ -71,7 +71,7 @@ export default function ContactPage() {
               </Link>
             </div>
 
-            <div className="border-t border-[#ede5d5] pt-6">
+            <div id="book-around-the-world" className="border-t border-[#ede5d5] pt-6 scroll-mt-24">
               <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Book Around the World</p>
               <p className="text-[#8c7b6b] text-sm leading-relaxed mb-4">
                 Chef Rocco is hosting culinary experiences beyond Sicily. Explore and reserve
