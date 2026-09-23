@@ -7,8 +7,18 @@ export default function ContactPage() {
   const [email, setEmail] = useState("");
   const [travelers, setTravelers] = useState("2");
   const [message, setMessage] = useState("");
+  const youliFlagshipRef = useRef<HTMLDivElement>(null);
   const youliRef = useRef<HTMLDivElement>(null);
   const youliSicilianTableRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!youliFlagshipRef.current) return;
+    const script = document.createElement("script");
+    script.src =
+      "https://youli.io/embeds/script/trips/chef-rocco-garibaldi-culinary-experience/?view=card&tripid=e28f8a28-0672-f011-8dc8-002248c0776b&style=detailed";
+    script.async = true;
+    youliFlagshipRef.current.appendChild(script);
+  }, []);
 
   useEffect(() => {
     if (!youliRef.current) return;
@@ -63,14 +73,7 @@ export default function ContactPage() {
                 Use our booking form to secure your spot. Early bird pricing ($5,600 pp) is
                 available through March 9th, 2027.
               </p>
-              <a
-                href="/contact"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-3 bg-[#b8924a] text-white px-6 py-3 text-sm tracking-widest uppercase hover:bg-[#b8924a] transition-colors"
-              >
-                Book Italy
-              </a>
+              <div ref={youliFlagshipRef} className="mt-4" />
             </div>
 
             <div className="border-t border-[#ede5d5] pt-6">
