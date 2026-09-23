@@ -71,7 +71,7 @@ export default function ContactPage() {
       </section>
 
       {/* Content */}
-      <section className="max-w-5xl mx-auto px-6 py-24 grid grid-cols-1 md:grid-cols-2 gap-16">
+      <section className="max-w-3xl mx-auto px-6 py-24">
         {/* Info */}
         <div>
           <h2 className="font-serif text-3xl text-[#000000] mb-8">Reach Rocco&apos;s</h2>
@@ -115,57 +115,61 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Form */}
-        <div>
+      {/* Form */}
+      <section className="bg-[#f5f0e6] py-24 px-6">
+        <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl text-[#000000] mb-8">Send an Inquiry</h2>
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div>
-              <label htmlFor="name" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
-                Full Name
-              </label>
-              <input
-                id="name"
-                type="text"
-                required
-                placeholder="Your name"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
-              />
-            </div>
+          <form onSubmit={handleSubmit} className="space-y-5 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
+              <div>
+                <label htmlFor="name" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
+                  Full Name
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  required
+                  placeholder="Your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
+                />
+              </div>
 
-            <div>
-              <label htmlFor="email" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
-                Email Address
-              </label>
-              <input
-                id="email"
-                type="email"
-                required
-                placeholder="your@email.com"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
-              />
-            </div>
+              <div>
+                <label htmlFor="email" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
+                  Email Address
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  required
+                  placeholder="your@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] placeholder-[#b0a090] focus:outline-none focus:border-[#b8924a] transition-colors"
+                />
+              </div>
 
-            <div>
-              <label htmlFor="travelers" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
-                Number of Travelers
-              </label>
-              <select
-                id="travelers"
-                value={travelers}
-                onChange={(e) => setTravelers(e.target.value)}
-                className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#b8924a] transition-colors"
-              >
-                <option value="1">1 (single room supplement applies)</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5+">5+ (group — custom itinerary available)</option>
-              </select>
+              <div>
+                <label htmlFor="travelers" className="block text-[#000000] text-xs tracking-widest uppercase mb-2">
+                  Number of Travelers
+                </label>
+                <select
+                  id="travelers"
+                  value={travelers}
+                  onChange={(e) => setTravelers(e.target.value)}
+                  className="w-full border border-[#ede5d5] bg-white px-4 py-3 text-sm text-[#000000] focus:outline-none focus:border-[#b8924a] transition-colors"
+                >
+                  <option value="1">1 (single room supplement applies)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5+">5+ (group — custom itinerary available)</option>
+                </select>
+              </div>
             </div>
 
             <div>
@@ -182,12 +186,14 @@ export default function ContactPage() {
               />
             </div>
 
-            <button
-              type="submit"
-              className="w-full bg-[#b8924a] text-white px-8 py-4 text-sm tracking-widest uppercase hover:bg-[#c9a45a] transition-colors"
-            >
-              Send Inquiry
-            </button>
+            <div className="text-center">
+              <button
+                type="submit"
+                className="w-full sm:w-auto bg-[#b8924a] text-white px-16 py-4 text-sm tracking-widest uppercase hover:bg-[#c9a45a] transition-colors"
+              >
+                Send Inquiry
+              </button>
+            </div>
           </form>
         </div>
       </section>
