@@ -16,16 +16,16 @@ const chefs = [
     href: "/story",
   },
   {
-    name: "Chef Roberto",
-    role: "Chef & Pizzaiolo",
-    bio: "Co-owner of Rocco's Pizza Pub and Rocco's right hand, Roberto brings expert pizza craft to the villa kitchen. He also leads the legendary hike up La Rocca di Cefalù.",
-    href: "/chefs/roberto",
-  },
-  {
     name: "Chef Ryan",
     role: "Master Pastaio",
     bio: "Traveling from Rome, Italy, Ryan is a master pasta maker whose Sicilian pasta sessions are a highlight of the experience. His pasta-making class is an unforgettable hands-on journey into the heart of Italian cuisine.",
     href: "/chefs/ryan",
+  },
+  {
+    name: "Chef Roberto",
+    role: "Chef & Pizzaiolo",
+    bio: "Co-owner of Rocco's Pizza Pub and Rocco's right hand, Roberto brings expert pizza craft to the villa kitchen. He also leads the legendary hike up La Rocca di Cefalù.",
+    href: "/chefs/roberto",
   },
 ];
 
