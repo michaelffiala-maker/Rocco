@@ -88,8 +88,8 @@ export default function PricingPage() {
           <div className="bg-white border border-[#ede5d5] p-6">
             <h3 className="font-serif text-lg text-[#000000] mb-2">Payment</h3>
             <p className="text-[#7a8090] text-sm leading-relaxed">
-              Payments are secured via US Bank Transfer to Bank of America in USD funds.
-              Payment secures your reservation based on availability.
+              Payments are secured via credit card or Bank Transfer to Bank of America
+              in USD funds. Payment secures your reservation based on availability.
             </p>
           </div>
 
