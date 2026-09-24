@@ -60,7 +60,7 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/homepage-movie.mp4" type="video/mp4" />
+          <source src="/pasta.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-[#fdfaf4]/20" />
 
