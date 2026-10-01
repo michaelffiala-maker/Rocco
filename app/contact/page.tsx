@@ -59,7 +59,7 @@ export default function ContactPage() {
 
           <div className="space-y-6">
             <div>
-              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Ready to Book?</p>
+              <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-1">Book Now</p>
               <p className="text-[#8c7b6b] text-sm leading-relaxed">
                 Visit Pricing &amp; Book to see dates and reserve your spot.
               </p>

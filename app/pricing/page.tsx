@@ -35,7 +35,7 @@ export default function PricingPage() {
       {/* Hero */}
       <section className="bg-[#000000] py-20 px-6 text-center">
         <h1 className="sr-only">Pricing & Book — Chef Rocco Garibaldi Sicily Experience</h1>
-        <p className="text-[#c9a45a] text-xs tracking-[0.3em] uppercase mb-3">Invest in the Experience</p>
+        <p className="text-[#c9a45a] text-xs tracking-[0.3em] uppercase mb-3">Experience and Create Memories of a Lifetime</p>
         <p className="text-[#b0a090] text-lg max-w-xl mx-auto">
           All-exclusive. Every detail covered.
         </p>
@@ -45,7 +45,7 @@ export default function PricingPage() {
       <section className="max-w-5xl mx-auto px-6 py-24">
         {/* Ready to Book */}
         <div id="ready-to-book" className="mb-12 scroll-mt-24">
-          <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3 text-center">Ready to Book?</p>
+          <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3 text-center">Book Now</p>
           <ItalyTripCards />
         </div>
 
