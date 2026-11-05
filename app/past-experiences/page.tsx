@@ -88,32 +88,51 @@ function getImages(subdir: string, captions?: Record<string, string>): GalleryIt
   }
 }
 
+const PER_ROW = 3;
+
 function PhotoGrid({ images, altPrefix }: { images: GalleryItem[]; altPrefix: string }) {
+  const rows: GalleryItem[][] = [];
+  for (let i = 0; i < images.length; i += PER_ROW) rows.push(images.slice(i, i + PER_ROW));
+
   return (
-    <div className="flex flex-wrap items-start gap-4">
-      {images.map((item, i) => (
-        <div
-          key={item.src}
-          className="flex-grow-0"
-          style={{ width: `${(item.width / item.height) * 15}rem`, maxWidth: "100%" }}
-        >
-          <Image
-            src={item.src}
-            alt={item.caption ? `${item.caption} — ${altPrefix}` : `${altPrefix} photo ${i + 1}`}
-            width={item.width}
-            height={item.height}
-            unoptimized
-            loading="eager"
-            className="w-full h-auto hover:opacity-90 transition-opacity"
-            sizes="(max-width: 1024px) 50vw, 33vw"
-          />
-          {item.caption && (
-            <p className="mt-2 text-[#7a8090] text-xs tracking-[0.15em] uppercase text-center">
-              {item.caption}
-            </p>
-          )}
-        </div>
-      ))}
+    <div className="space-y-4">
+      {rows.map((row, rowIndex) => {
+        const isFullRow = row.length === PER_ROW;
+        return (
+          <div key={rowIndex} className="flex gap-4">
+            {row.map((item, i) => {
+              const aspect = item.width / item.height;
+              return (
+                <div
+                  key={item.src}
+                  className="min-w-0"
+                  style={
+                    isFullRow
+                      ? { flexGrow: aspect, flexBasis: 0 }
+                      : { flexGrow: 0, flexShrink: 0, width: `${aspect * 15}rem`, maxWidth: "100%" }
+                  }
+                >
+                  <Image
+                    src={item.src}
+                    alt={item.caption ? `${item.caption} — ${altPrefix}` : `${altPrefix} photo ${rowIndex * PER_ROW + i + 1}`}
+                    width={item.width}
+                    height={item.height}
+                    unoptimized
+                    loading="eager"
+                    className="w-full h-auto hover:opacity-90 transition-opacity"
+                    sizes="(max-width: 1024px) 50vw, 33vw"
+                  />
+                  {item.caption && (
+                    <p className="mt-2 text-[#7a8090] text-xs tracking-[0.15em] uppercase text-center">
+                      {item.caption}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        );
+      })}
     </div>
   );
 }
