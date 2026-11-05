@@ -88,51 +88,66 @@ function getImages(subdir: string, captions?: Record<string, string>): GalleryIt
   }
 }
 
-const PER_ROW = 3;
+const TARGET_ROW_ASPECT_SUM = 4.6;
+
+function buildJustifiedRows(images: GalleryItem[]): { row: GalleryItem[]; fill: boolean }[] {
+  const rows: { row: GalleryItem[]; fill: boolean }[] = [];
+  let current: GalleryItem[] = [];
+  let sum = 0;
+  for (const item of images) {
+    current.push(item);
+    sum += item.width / item.height;
+    if (sum >= TARGET_ROW_ASPECT_SUM) {
+      rows.push({ row: current, fill: true });
+      current = [];
+      sum = 0;
+    }
+  }
+  if (current.length > 0) rows.push({ row: current, fill: false });
+  return rows;
+}
 
 function PhotoGrid({ images, altPrefix }: { images: GalleryItem[]; altPrefix: string }) {
-  const rows: GalleryItem[][] = [];
-  for (let i = 0; i < images.length; i += PER_ROW) rows.push(images.slice(i, i + PER_ROW));
+  const rows = buildJustifiedRows(images);
+  let runningIndex = 0;
 
   return (
     <div className="space-y-4">
-      {rows.map((row, rowIndex) => {
-        const isFullRow = row.length === PER_ROW;
-        return (
-          <div key={rowIndex} className="flex gap-4">
-            {row.map((item, i) => {
-              const aspect = item.width / item.height;
-              return (
-                <div
-                  key={item.src}
-                  className="min-w-0"
-                  style={
-                    isFullRow
-                      ? { flexGrow: aspect, flexBasis: 0 }
-                      : { flexGrow: 0, flexShrink: 0, width: `${aspect * 15}rem`, maxWidth: "100%" }
-                  }
-                >
-                  <Image
-                    src={item.src}
-                    alt={item.caption ? `${item.caption} — ${altPrefix}` : `${altPrefix} photo ${rowIndex * PER_ROW + i + 1}`}
-                    width={item.width}
-                    height={item.height}
-                    unoptimized
-                    loading="eager"
-                    className="w-full h-auto hover:opacity-90 transition-opacity"
-                    sizes="(max-width: 1024px) 50vw, 33vw"
-                  />
-                  {item.caption && (
-                    <p className="mt-2 text-[#7a8090] text-xs tracking-[0.15em] uppercase text-center">
-                      {item.caption}
-                    </p>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-        );
-      })}
+      {rows.map(({ row, fill }, rowIndex) => (
+        <div key={rowIndex} className="flex gap-4">
+          {row.map((item) => {
+            const aspect = item.width / item.height;
+            const globalIndex = runningIndex++;
+            return (
+              <div
+                key={item.src}
+                className="min-w-0"
+                style={
+                  fill
+                    ? { flexGrow: aspect, flexBasis: 0 }
+                    : { flexGrow: 0, flexShrink: 0, width: `${aspect * 15}rem`, maxWidth: "100%" }
+                }
+              >
+                <Image
+                  src={item.src}
+                  alt={item.caption ? `${item.caption} — ${altPrefix}` : `${altPrefix} photo ${globalIndex + 1}`}
+                  width={item.width}
+                  height={item.height}
+                  unoptimized
+                  loading="eager"
+                  className="w-full h-auto hover:opacity-90 transition-opacity"
+                  sizes="(max-width: 1024px) 50vw, 33vw"
+                />
+                {item.caption && (
+                  <p className="mt-2 text-[#7a8090] text-xs tracking-[0.15em] uppercase text-center">
+                    {item.caption}
+                  </p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      ))}
     </div>
   );
 }
