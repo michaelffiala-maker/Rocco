@@ -41,19 +41,18 @@ function getImages(subdir: string, captions?: Record<string, string>): GalleryIt
 
 function PhotoGrid({ images, altPrefix }: { images: GalleryItem[]; altPrefix: string }) {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 items-start">
       {images.map((item, i) => (
-        <div key={item.src}>
-          <div className="relative aspect-[4/3] overflow-hidden">
-            <Image
-              src={item.src}
-              alt={item.caption ? `${item.caption} — ${altPrefix}` : `${altPrefix} photo ${i + 1}`}
-              fill
-              unoptimized
-              className="object-cover hover:opacity-90 transition-opacity"
-              sizes="(max-width: 1024px) 50vw, 33vw"
-            />
-          </div>
+        <div key={item.src} className="overflow-hidden">
+          <Image
+            src={item.src}
+            alt={item.caption ? `${item.caption} — ${altPrefix}` : `${altPrefix} photo ${i + 1}`}
+            width={800}
+            height={600}
+            unoptimized
+            className="w-full h-auto hover:opacity-90 transition-opacity"
+            sizes="(max-width: 1024px) 50vw, 33vw"
+          />
           {item.caption && (
             <p className="mt-2 text-[#7a8090] text-xs tracking-[0.15em] uppercase text-center">
               {item.caption}
