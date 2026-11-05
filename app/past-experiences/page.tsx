@@ -9,31 +9,56 @@ export const metadata: Metadata = {
     "Photos from past culinary experiences hosted by Chef Rocco Garibaldi — cooking, wine, villa life, and the beauty of Sicily.",
 };
 
-function getImages(subdir: string): string[] {
+type GalleryItem = { src: string; caption?: string };
+
+const ESTATE_CAPTIONS: Record<string, string> = {
+  "DSC00643.jpg": "Lemons · Limoni",
+  "DSC00651.jpg": "Apricots · Albicocche",
+  "DSC00685.jpg": "Apricots · Albicocche",
+  "DSC00659.jpg": "Plums · Susine",
+  "DSC00667.jpg": "Plums · Susine",
+  "DSC00689.jpg": "Plums · Susine",
+  "DSC00664.jpg": "Quince · Mela Cotogna",
+  "DSC00687.jpg": "Quince · Mela Cotogna",
+  "DSC00694.jpg": "Figs · Fichi",
+  "DSC00847.jpg": "Pears · Pere",
+  "DSC00701.jpg": "Olive Trees · Olivo Frantoio",
+  "DSC00857.jpg": "Grapevines · Vigneto",
+  "3b0aaf7e-8219-4197-9bcb-87df53fa207e_orig.jpeg": "Grapevines · Vigneto",
+  "ac97e039-8f23-40b6-bcab-df18df19e1cb.jpeg": "Harvested Grapes · Vendemmia",
+};
+
+function getImages(subdir: string, captions?: Record<string, string>): GalleryItem[] {
   const dir = path.join(process.cwd(), "public", "gallery", subdir);
   try {
     return readdirSync(dir)
       .filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && f !== "featured-property.jpg")
-      .map((f) => `/gallery/${subdir}/${f}`);
+      .map((f) => ({ src: `/gallery/${subdir}/${f}`, caption: captions?.[f] }));
   } catch {
     return [];
   }
 }
 
-function MasonryGrid({ images, altPrefix }: { images: string[]; altPrefix: string }) {
+function PhotoGrid({ images, altPrefix }: { images: GalleryItem[]; altPrefix: string }) {
   return (
-    <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-      {images.map((src, i) => (
-        <div key={src} className="break-inside-avoid overflow-hidden">
-          <Image
-            src={src}
-            alt={`${altPrefix} photo ${i + 1}`}
-            width={800}
-            height={600}
-            unoptimized
-            className="w-full h-auto object-cover hover:opacity-90 transition-opacity"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          />
+    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4">
+      {images.map((item, i) => (
+        <div key={item.src}>
+          <div className="relative aspect-[4/3] overflow-hidden">
+            <Image
+              src={item.src}
+              alt={item.caption ? `${item.caption} — ${altPrefix}` : `${altPrefix} photo ${i + 1}`}
+              fill
+              unoptimized
+              className="object-cover hover:opacity-90 transition-opacity"
+              sizes="(max-width: 1024px) 50vw, 33vw"
+            />
+          </div>
+          {item.caption && (
+            <p className="mt-2 text-[#7a8090] text-xs tracking-[0.15em] uppercase text-center">
+              {item.caption}
+            </p>
+          )}
         </div>
       ))}
     </div>
@@ -52,7 +77,7 @@ function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) 
 export default function PastExperiencesPage() {
   const foodWineImages = getImages("food-wine");
   const cultureImages = getImages("culture");
-  const estateImages = getImages("estate");
+  const estateImages = getImages("estate", ESTATE_CAPTIONS);
   const hasAny = foodWineImages.length + cultureImages.length + estateImages.length > 0;
 
   return (
@@ -78,21 +103,21 @@ export default function PastExperiencesPage() {
             {foodWineImages.length > 0 && (
               <div>
                 <SectionHeading eyebrow="Cucina & Vino" title="Food & Wine" />
-                <MasonryGrid images={foodWineImages} altPrefix="Food & wine" />
+                <PhotoGrid images={foodWineImages} altPrefix="Food & wine" />
               </div>
             )}
 
             {cultureImages.length > 0 && (
               <div>
                 <SectionHeading eyebrow="Sicilia" title="Culture" />
-                <MasonryGrid images={cultureImages} altPrefix="Sights of Sicily" />
+                <PhotoGrid images={cultureImages} altPrefix="Sights of Sicily" />
               </div>
             )}
 
             {estateImages.length > 0 && (
               <div>
                 <SectionHeading eyebrow="Tenuta & Vigneto" title="The Rocco Garibaldi Estate & Vineyard" />
-                <div className="mb-4 overflow-hidden">
+                <div className="mb-8 overflow-hidden">
                   <Image
                     src="/gallery/estate/featured-property.jpg"
                     alt="The Rocco Garibaldi Estate"
@@ -104,7 +129,7 @@ export default function PastExperiencesPage() {
                     priority
                   />
                 </div>
-                <MasonryGrid images={estateImages} altPrefix="Rocco Garibaldi Estate & Vineyard" />
+                <PhotoGrid images={estateImages} altPrefix="Rocco Garibaldi Estate & Vineyard" />
               </div>
             )}
           </div>
