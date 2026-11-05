@@ -9,19 +9,51 @@ export const metadata: Metadata = {
     "Photos from past culinary experiences hosted by Chef Rocco Garibaldi — cooking, wine, villa life, and the beauty of Sicily.",
 };
 
-function getGalleryImages(): string[] {
-  const dir = path.join(process.cwd(), "public", "gallery");
+function getImages(subdir: string): string[] {
+  const dir = path.join(process.cwd(), "public", "gallery", subdir);
   try {
     return readdirSync(dir)
-      .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
-      .map((f) => `/gallery/${f}`);
+      .filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && f !== "featured-property.jpg")
+      .map((f) => `/gallery/${subdir}/${f}`);
   } catch {
     return [];
   }
 }
 
+function MasonryGrid({ images, altPrefix }: { images: string[]; altPrefix: string }) {
+  return (
+    <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+      {images.map((src, i) => (
+        <div key={src} className="break-inside-avoid overflow-hidden">
+          <Image
+            src={src}
+            alt={`${altPrefix} photo ${i + 1}`}
+            width={800}
+            height={600}
+            unoptimized
+            className="w-full h-auto object-cover hover:opacity-90 transition-opacity"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </div>
+      ))}
+    </div>
+  );
+}
+
+function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
+  return (
+    <div className="mb-10">
+      <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-3">{eyebrow}</p>
+      <h2 className="font-serif text-3xl md:text-4xl text-[#000000]">{title}</h2>
+    </div>
+  );
+}
+
 export default function PastExperiencesPage() {
-  const images = getGalleryImages();
+  const foodWineImages = getImages("food-wine");
+  const cultureImages = getImages("culture");
+  const estateImages = getImages("estate");
+  const hasAny = foodWineImages.length + cultureImages.length + estateImages.length > 0;
 
   return (
     <>
@@ -36,26 +68,45 @@ export default function PastExperiencesPage() {
 
       {/* Gallery */}
       <section className="max-w-7xl mx-auto px-6 py-24">
-        {images.length === 0 ? (
+        {!hasAny ? (
           <div className="text-center py-24">
             <div className="w-12 h-px bg-[#b8924a] mx-auto mb-8" />
             <p className="text-[#7a8090] text-lg">Photos coming soon.</p>
           </div>
         ) : (
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-            {images.map((src, i) => (
-              <div key={src} className="break-inside-avoid overflow-hidden">
-                <Image
-                  src={src}
-                  alt={`Past experience photo ${i + 1}`}
-                  width={800}
-                  height={600}
-                  unoptimized
-                  className="w-full h-auto object-cover hover:opacity-90 transition-opacity"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                />
+          <div className="space-y-24">
+            {foodWineImages.length > 0 && (
+              <div>
+                <SectionHeading eyebrow="Cucina & Vino" title="Food & Wine" />
+                <MasonryGrid images={foodWineImages} altPrefix="Food & wine" />
               </div>
-            ))}
+            )}
+
+            {cultureImages.length > 0 && (
+              <div>
+                <SectionHeading eyebrow="Sicilia" title="Culture" />
+                <MasonryGrid images={cultureImages} altPrefix="Sights of Sicily" />
+              </div>
+            )}
+
+            {estateImages.length > 0 && (
+              <div>
+                <SectionHeading eyebrow="Tenuta & Vigneto" title="The Rocco Garibaldi Estate & Vineyard" />
+                <div className="mb-4 overflow-hidden">
+                  <Image
+                    src="/gallery/estate/featured-property.jpg"
+                    alt="The Rocco Garibaldi Estate"
+                    width={1600}
+                    height={1067}
+                    unoptimized
+                    className="w-full h-auto object-cover"
+                    sizes="100vw"
+                    priority
+                  />
+                </div>
+                <MasonryGrid images={estateImages} altPrefix="Rocco Garibaldi Estate & Vineyard" />
+              </div>
+            )}
           </div>
         )}
       </section>
