@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { readdirSync } from "fs";
+import { readdirSync, readFileSync } from "fs";
 import path from "path";
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Photos from past culinary experiences hosted by Chef Rocco Garibaldi — cooking, wine, villa life, and the beauty of Sicily.",
 };
 
-type GalleryItem = { src: string; caption?: string };
+type GalleryItem = { src: string; width: number; height: number; caption?: string };
 
 const ESTATE_CAPTIONS: Record<string, string> = {
   "DSC00643.jpg": "Lemons · Limoni",
@@ -28,12 +28,61 @@ const ESTATE_CAPTIONS: Record<string, string> = {
   "ac97e039-8f23-40b6-bcab-df18df19e1cb.jpeg": "Harvested Grapes · Vendemmia",
 };
 
+function readJpegDimensions(buf: Buffer): { width: number; height: number } | null {
+  if (buf[0] !== 0xff || buf[1] !== 0xd8) return null;
+  let offset = 2;
+  while (offset + 4 <= buf.length) {
+    if (buf[offset] !== 0xff) {
+      offset++;
+      continue;
+    }
+    const marker = buf[offset + 1];
+    if (marker === 0xd8 || marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) {
+      offset += 2;
+      continue;
+    }
+    if (marker === 0xd9 || marker === 0xda) break;
+    const length = buf.readUInt16BE(offset + 2);
+    const isSOF =
+      (marker >= 0xc0 && marker <= 0xc3) ||
+      (marker >= 0xc5 && marker <= 0xc7) ||
+      (marker >= 0xc9 && marker <= 0xcb) ||
+      (marker >= 0xcd && marker <= 0xcf);
+    if (isSOF) {
+      const height = buf.readUInt16BE(offset + 5);
+      const width = buf.readUInt16BE(offset + 7);
+      return { width, height };
+    }
+    offset += 2 + length;
+  }
+  return null;
+}
+
+function readPngDimensions(buf: Buffer): { width: number; height: number } | null {
+  if (buf.readUInt32BE(0) !== 0x89504e47) return null;
+  return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+}
+
+function readImageDimensions(filePath: string): { width: number; height: number } {
+  try {
+    const buf = readFileSync(filePath);
+    const dims = readPngDimensions(buf) ?? readJpegDimensions(buf);
+    if (dims && dims.width > 0 && dims.height > 0) return dims;
+  } catch {
+    // fall through to default
+  }
+  return { width: 4, height: 3 };
+}
+
 function getImages(subdir: string, captions?: Record<string, string>): GalleryItem[] {
   const dir = path.join(process.cwd(), "public", "gallery", subdir);
   try {
     return readdirSync(dir)
       .filter((f) => /\.(jpe?g|png|webp)$/i.test(f) && f !== "featured-property.jpg")
-      .map((f) => ({ src: `/gallery/${subdir}/${f}`, caption: captions?.[f] }));
+      .map((f) => {
+        const { width, height } = readImageDimensions(path.join(dir, f));
+        return { src: `/gallery/${subdir}/${f}`, width, height, caption: captions?.[f] };
+      });
   } catch {
     return [];
   }
@@ -41,15 +90,20 @@ function getImages(subdir: string, captions?: Record<string, string>): GalleryIt
 
 function PhotoGrid({ images, altPrefix }: { images: GalleryItem[]; altPrefix: string }) {
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 items-start">
+    <div className="flex flex-wrap items-start gap-4">
       {images.map((item, i) => (
-        <div key={item.src} className="overflow-hidden">
+        <div
+          key={item.src}
+          className="flex-grow-0"
+          style={{ width: `${(item.width / item.height) * 15}rem`, maxWidth: "100%" }}
+        >
           <Image
             src={item.src}
             alt={item.caption ? `${item.caption} — ${altPrefix}` : `${altPrefix} photo ${i + 1}`}
-            width={800}
-            height={600}
+            width={item.width}
+            height={item.height}
             unoptimized
+            loading="eager"
             className="w-full h-auto hover:opacity-90 transition-opacity"
             sizes="(max-width: 1024px) 50vw, 33vw"
           />
