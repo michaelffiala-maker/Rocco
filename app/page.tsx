@@ -18,7 +18,7 @@ export default function Home() {
           Travel and experience the culinary traditions and beauty of the Old Country
         </p>
         <p className="text-[#b8924a] text-xs tracking-[0.3em] uppercase mb-10">
-          September 1 – 10, 2027 · Sicily, Italy
+          September 2 – 11, 2027 · Sicily, Italy
         </p>
         <div className="flex flex-col items-center gap-4">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -47,7 +47,7 @@ export default function Home() {
       {/* Dates banner */}
       <section className="bg-[#000000] border-y border-[#b8924a]/30 text-[#ede5d5] py-4 text-center">
         <p className="text-xs tracking-[0.3em] uppercase">
-          September 1–10, 2027 &nbsp;·&nbsp; Cefalù & Taormina, Sicily
+          September 2–11, 2027 &nbsp;·&nbsp; Cefalù & Taormina, Sicily
         </p>
       </section>
 
